@@ -85,6 +85,7 @@ img{
 
     max-width: 1140px;
     margin-inline: auto;
+    padding-inline: 15px;
 }
 .grid{
     display: grid;
