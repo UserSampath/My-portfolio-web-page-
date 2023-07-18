@@ -120,6 +120,10 @@ img{
     transition: all 0.25s ease-in-out;
 }
 
+.button__icon{
+    color: var(--text-white) !important;
+}
+
 
 .button:hover{
     color: var(--text-white);
