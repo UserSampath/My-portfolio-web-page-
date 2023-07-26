@@ -1,8 +1,8 @@
 import React from 'react'
 
-const ThemeItem = ({color,img}) => {
+const ThemeItem = ({color,img ,changeColor}) => {
   return (
-    <img src={img} alt="" className="theme__img" />
+    <img src={img} alt="" className="theme__img" onClick={()=>{changeColor(color)}}/>
   )
 }
 

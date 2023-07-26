@@ -1,15 +1,19 @@
 import React from "react";
+import { useForm, ValidationError } from "@formspree/react";
 import {
   FaEnvelopeOpen,
   FaPhoneSquareAlt,
-  FaFacebookF,
-  FaTwitter,
-  FaYoutube,
-  FaDribbble,
+  FaLinkedinIn,
+  FaMedium,
 } from "react-icons/fa";
-import { FiSend } from "react-icons/fi";
+import { FiSend, FiGithub } from "react-icons/fi";
+import { SiSololearn } from "react-icons/si";
 import "./contact.css";
 const Contact = () => {
+  const [state, handleSubmit] = useForm("xleydleb");
+    if (state.succeeded) {
+      return <p>Thanks for joining!</p>;
+    }
   return (
     <section className="contact section">
       <h2 className="section__title">
@@ -20,9 +24,8 @@ const Contact = () => {
         <div className="contact__data">
           <h3 className="contact__title">
             <p className="contact__description">
-              Feel free to get in touch with me.Feel free to get in touch with
-              me.Feel free to get in touch with me.Feel free to get in touch
-              with me.
+              Feel free to get in touch via email or phone, and let's connect
+              and create something amazing together!
             </p>
             <div className="contact__info">
               <div className="info__item">
@@ -43,33 +46,43 @@ const Contact = () => {
             </div>
 
             <div className="contact__socials">
-              <a href="" className="contact__social-link">
-                <FaFacebookF />
+              <a
+                href="https://www.linkedin.com/in/nalaka-sampath/"
+                className="contact__social-link">
+                <FaLinkedinIn />
               </a>
-              <a href="" className="contact__social-link">
-                <FaTwitter />
+              <a
+                href="https://github.com/UserSampath"
+                className="contact__social-link">
+                <FiGithub />
               </a>
-              <a href="" className="contact__social-link">
-                <FaYoutube />
+              <a
+                href="https://www.sololearn.com/profile/29184409"
+                className="contact__social-link">
+                <SiSololearn />
               </a>
-              <a href="" className="contact__social-link">
-                <FaDribbble />
+              <a
+                href="https://medium.com/@nalakasampathsmp"
+                className="contact__social-link">
+                <FaMedium />
               </a>
             </div>
           </h3>
         </div>
-        <form action="" className="contact__form">
+        <form className="contact__form" onSubmit={handleSubmit}>
           <div className="form__input-group">
             <div className="form__input-div">
               <input
                 type="text"
                 placeholder="Your Name"
                 className="form__control"
+                name="name"
               />
             </div>
 
             <div className="form__input-div">
               <input
+                name="email"
                 type="email"
                 placeholder="Your Email"
                 className="form__control"
@@ -81,15 +94,17 @@ const Contact = () => {
                 type="text"
                 placeholder="Your Subject"
                 className="form__control"
+                name="subject"
               />
             </div>
           </div>
           <div className="form__input-div">
             <textarea
+              name="message"
               placeholder="Your Message"
               className="form__control textarea"></textarea>
           </div>
-          <button className="button">
+          <button className="button" disabled={state.submitting}>
             Send Message
             <span className="button__icon contact__button-icon">
               <FiSend />

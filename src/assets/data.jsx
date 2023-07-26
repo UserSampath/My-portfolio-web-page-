@@ -9,12 +9,10 @@ import {
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
 
-import Work1 from "./project-1.jpeg";
-import Work2 from "./project-2.jpg";
-import Work3 from "./project-3.jpeg";
-import Work4 from "./project-4.jpeg";
-import Work5 from "./project-5.jpg";
-import Work6 from "./project-6.jpg";
+import Work1 from "./app.png";
+import Work2 from "./web.png";
+import Work3 from "./ui.png";
+
 
 import Theme1 from "./purple.png";
 import Theme2 from "./red.png";
@@ -61,87 +59,74 @@ export const personalInfo = [
   {
     id: 1,
     title: "First Name : ",
-    description: "Steve",
+    description: "Nalaka",
   },
 
   {
     id: 2,
     title: "Last Name : ",
-    description: "Milner",
+    description: "Sampath",
   },
 
   {
     id: 3,
     title: "Age : ",
-    description: "27 Years",
-  },
-
-  {
-    id: 4,
-    title: "Nationality : ",
-    description: "Tunisian",
-  },
-
-  {
-    id: 5,
-    title: "Freelance : ",
-    description: "Available",
+    description: "23 Years",
   },
 
   {
     id: 6,
     title: "Address : ",
-    description: "Tunis",
+    description: "Rathnapura",
   },
 
   {
     id: 7,
     title: "Phone : ",
-    description: "+21621184010",
-  },
-
-  {
-    id: 8,
-    title: "Email : ",
-    description: "you@mail.com",
+    description: "078 8916 150",
   },
 
   {
     id: 9,
-    title: "Skype : ",
-    description: "steve.milner",
+    title: "linkedin : ",
+    description: "nalaka-sampath",
   },
 
   {
     id: 10,
     title: "Langages : ",
-    description: "French, English",
+    description: "Sinhala, English",
+  },
+  {
+    id: 8,
+    title: "Email : ",
+    description: "nalakasampathsmp@mail.com",
   },
 ];
 
 export const stats = [
   {
     id: 1,
-    no: "12+",
+    no: "2+",
     title: "Years of <br /> Experience",
   },
 
   {
     id: 2,
-    no: "97+",
+    no: "5+",
     title: "Completed <br /> Projects",
   },
 
   {
     id: 3,
-    no: "81+",
-    title: "Happy <br /> Customers",
+    no: "29+",
+    title: "Pull <br /> Requests",
   },
 
   {
     id: 4,
-    no: "53+",
-    title: " Awards <br /> Won",
+    no: "200+",
+    title: " Github <br /> commits",
   },
 ];
 
@@ -150,104 +135,104 @@ export const resume = [
     id: 1,
     category: "experience",
     icon: <FaBriefcase />,
-    year: "2018 - PRESENT",
-    title: "Web Developer <span> Envato </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
-  },
-
-  {
-    id: 2,
-    category: "experience",
-    icon: <FaBriefcase />,
-    year: "2013 - 2018",
-    title: "UI/UX Designer <span> Themeforest </span>",
-    desc: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt",
+    year: "2022 - PRESENT",
+    title: "Volunteer <span> Leo Club </span>",
+    desc: "Contributed to the projects organized by Leo Club of University of Moratuwa",
   },
 
   {
     id: 3,
     category: "experience",
     icon: <FaBriefcase />,
-    year: "2005 - 2013",
-    title: "Consultant <span> Videohive </span>",
-    desc: "Lorem ipsum dolor sit amet, tempor incididunt ut laboreconsectetur elit, sed do eiusmod tempor duntt",
+    year: "2019 - 2020",
+    title: "Accountant <span> Nethmini Agro Export Pvt Ltd </span>",
+    desc: "As an Accountant , I played a crucial role in managing the financial aspects of the company.",
+  },
+
+  {
+    id: 2,
+    category: "experience",
+    icon: <FaBriefcase />,
+    year: "2016 - 2018",
+    title: "Senior prefect <span> Wajirawansha M.V </span>",
+    desc: "As a Senior Prefect, I held a position of responsibility and leadership within the school community.",
   },
 
   {
     id: 4,
     category: "education",
     icon: <FaGraduationCap />,
-    year: "2015",
-    title: "Engineering Degree <span> Oxford University </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore",
+    year: "PRESENT",
+    title: "B.sc.(Hons) IT&M <span>University of Moratuwa</span>",
+    desc: "I am a second year undergraduate of the University of Moratuwa having Current GPA: 3.15",
   },
 
   {
     id: 5,
     category: "education",
     icon: <FaGraduationCap />,
-    year: "2012",
-    title: "Master Degree <span> KIEV University </span>",
-    desc: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt",
+    year: "2021",
+    title: "Web development course <span> VICERANT INSTITUTE </span>",
+    desc: "I learnt the basics of web development technologies like HTML,CSS,JavaScript,PHP,Bootstrap",
   },
 
   {
     id: 6,
     category: "education",
     icon: <FaGraduationCap />,
-    year: "2009",
-    title: "Bachelor Degree <span> Tunis High School </span>",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore",
+    year: "2019",
+    title: "G.C.E Advanced Level <span> commerce stream </span>",
+    desc: "District Rank - 21, ICT-A, Accounting-A, Economics-A ",
   },
 ];
 
 export const skills = [
   {
     id: 1,
-    title: "Html",
-    percentage: "25",
+    title: "java",
+    percentage: "80",
   },
 
   {
     id: 2,
-    title: "Javascript",
-    percentage: "89",
-  },
-
-  {
-    id: 3,
-    title: "Css",
-    percentage: "70",
-  },
-
-  {
-    id: 4,
-    title: "Php",
-    percentage: "66",
-  },
-
-  {
-    id: 5,
-    title: "Wordpress",
-    percentage: "95",
-  },
-
-  {
-    id: 6,
-    title: "Jquery",
-    percentage: "50",
-  },
-
-  {
-    id: 7,
-    title: "Angular",
+    title: "C",
     percentage: "65",
   },
 
   {
-    id: 8,
+    id: 3,
     title: "React",
-    percentage: "45",
+    percentage: "80",
+  },
+
+  {
+    id: 4,
+    title: "Node.js",
+    percentage: "85",
+  },
+
+  {
+    id: 5,
+    title: "Javascript",
+    percentage: "80",
+  },
+
+  {
+    id: 6,
+    title: "Flutter",
+    percentage: "65",
+  },
+
+  {
+    id: 7,
+    title: "MySQL",
+    percentage: "75",
+  },
+
+  {
+    id: 8,
+    title: "MongoDB",
+    percentage: "80",
   },
 ];
 
@@ -255,27 +240,12 @@ export const portfolio = [
   {
     id: 1,
     img: Work1,
-    title: "Photo Editing",
+    title: "Mobile Application",
     details: [
       {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Photo",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
         icon: <FaCode />,
-        title: "Language : ",
-        desc: "Adobe Photoshop",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dribble.com",
+        title: "Technology : ",
+        desc: "Flutter",
       },
     ],
   },
@@ -286,24 +256,9 @@ export const portfolio = [
     title: "Website Design",
     details: [
       {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Website",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
         icon: <FaCode />,
-        title: "Language : ",
-        desc: "React JS",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dribble.com",
+        title: "Technology : ",
+        desc: "MERN stack ",
       },
     ],
   },
@@ -311,107 +266,12 @@ export const portfolio = [
   {
     id: 3,
     img: Work3,
-    title: "Video Editing",
+    title: "UI/UX",
     details: [
-      {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Video",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
       {
         icon: <FaCode />,
-        title: "Language : ",
-        desc: "Adobe Premium",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dribble.com",
-      },
-    ],
-  },
-
-  {
-    id: 4,
-    img: Work4,
-    title: "Video Editing",
-    details: [
-      {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Video",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
-        icon: <FaCode />,
-        title: "Language : ",
-        desc: "Adobe Premium",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dribble.com",
-      },
-    ],
-  },
-
-  {
-    id: 5,
-    img: Work5,
-    title: "Landing Page",
-    details: [
-      {
-        title: "Project : ",
-        desc: "Website",
-      },
-      {
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
-        title: "Language : ",
-        desc: "React JS, Node JS",
-      },
-      {
-        title: "Preview : ",
-        desc: "www.dribble.com",
-      },
-    ],
-  },
-
-  {
-    id: 6,
-    img: Work6,
-    title: "Photo Editing",
-    details: [
-      {
-        icon: <FiFileText />,
-        title: "Project : ",
-        desc: "Photo",
-      },
-      {
-        icon: <FiUser />,
-        title: "Client : ",
-        desc: "Dribble",
-      },
-      {
-        icon: <FaCode />,
-        title: "Language : ",
-        desc: "Adobe Photoshop",
-      },
-      {
-        icon: <FiExternalLink />,
-        title: "Preview : ",
-        desc: "www.dibble.com",
+        title: "Technology : ",
+        desc: "Figma",
       },
     ],
   },
