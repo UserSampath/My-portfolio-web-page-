@@ -6,6 +6,7 @@
   width: 100%;
   padding: 60px 30px;
   transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+  z-index: 100;
 }
 .show-menu {
   left: 0;
@@ -42,6 +43,7 @@
   border-radius: 5px;
   background-color: var(--container-color);
   padding: 12px 10px;
+  z-index: 100;
 }
 
 .nav__toggle span {
@@ -67,6 +69,7 @@
 @media screen and (min-width: 1024px) {
   .nav__menu {
     all: unset;
+    
   }
   .nav__toggle {
     display: none;
@@ -77,6 +80,7 @@
     display: flex;
     right: 30px;
     align-items: center;
+    z-index: 100;
   }
   .nav__item {
     margin-block: 20px;
@@ -90,6 +94,9 @@
   height: 50px;
   border-radius: 50%;
   position: relative;
+}
+.dark-theme .nav__link{
+border-color:hsl(0,0%,20%) ;
 }
 .nav__name {
   position: absolute;
@@ -128,6 +135,7 @@
 
 .active__nav {
   background-color: var(--first-color);
+  
 }
 
 .nav__link:hover .nav__icon,
