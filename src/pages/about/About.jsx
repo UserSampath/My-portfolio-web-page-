@@ -7,6 +7,9 @@ import { FaDownload } from "react-icons/fa";
 import Skills from "../../components/Skills";
 import { resume } from "../../assets/data";
 import ResumeItem from "../../components/ResumeItem";
+
+
+
 const About = () => {
   return (
     <main className="section container">
