@@ -3,7 +3,7 @@ import "./about.css";
 import Info from "../../components/Info";
 import Stats from "../../components/Stats";
 import { FaDownload } from "react-icons/fa";
-import CV from "../../assets/Nalaka Sampath_SE.pdf";
+// import CV from "../../assets/Nalaka Sampath_SE.pdf";
 import Skills from "../../components/Skills";
 import { resume } from "../../assets/data";
 import ResumeItem from "../../components/ResumeItem";
@@ -20,7 +20,10 @@ const About = () => {
             <ul className="info__list grid">
               <Info />
             </ul>
-            <a href={CV} download="" className="button">
+            <a
+              href="https://drive.google.com/drive/folders/1es9V4G3Vkp99GHWrSMwMYQCfp2flk73u?usp=drive_link"
+              download=""
+              className="button">
               Download Cv{" "}
               <span className="button__icon">
                 <FaDownload />

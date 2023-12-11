@@ -13,7 +13,6 @@ import Work1 from "./app.png";
 import Work2 from "./web.png";
 import Work3 from "./ui.png";
 
-
 import Theme1 from "./purple.png";
 import Theme2 from "./red.png";
 import Theme3 from "./blueviolet.png";
@@ -71,7 +70,7 @@ export const personalInfo = [
   {
     id: 3,
     title: "Age : ",
-    description: "23 Years",
+    description: "24 Years",
   },
 
   {
@@ -113,19 +112,19 @@ export const stats = [
 
   {
     id: 2,
-    no: "5+",
+    no: "7+",
     title: "Completed <br /> Projects",
   },
 
   {
     id: 3,
-    no: "29+",
+    no: "50+",
     title: "Pull <br /> Requests",
   },
 
   {
     id: 4,
-    no: "200+",
+    no: "350+",
     title: " Github <br /> commits",
   },
 ];
@@ -234,6 +233,11 @@ export const skills = [
     title: "MongoDB",
     percentage: "80",
   },
+  {
+    id: 9,
+    title: "ReactNative",
+    percentage: "75",
+  },
 ];
 
 export const portfolio = [
@@ -245,7 +249,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Technology : ",
-        desc: "Flutter",
+        desc: "Flutter,React Native",
       },
     ],
   },
@@ -258,7 +262,7 @@ export const portfolio = [
       {
         icon: <FaCode />,
         title: "Technology : ",
-        desc: "MERN stack ",
+        desc: "MERN stack",
       },
     ],
   },
