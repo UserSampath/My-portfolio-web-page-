@@ -72,7 +72,6 @@ const ResumeModal = () => {
             </div>
             <FaTrash
               style={{
-                right: "3px",
                 position: "absolute",
                 top: "50%",
                 right: "10px",

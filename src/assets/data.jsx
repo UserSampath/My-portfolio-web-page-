@@ -251,6 +251,22 @@ export const portfolio = [
     photo: [
       "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
       "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
     ],
   },
   {
@@ -278,7 +294,6 @@ export const portfolio = [
       "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
     ],
   },
- 
 ];
 
 export const themes = [

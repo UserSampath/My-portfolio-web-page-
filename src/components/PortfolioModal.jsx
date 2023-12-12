@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaTrash, FaPaperPlane, FaTimes } from "react-icons/fa";
 import { portfolio } from "../assets/data";
+import PhotosModal from "./PhotosModal";
 
 const PortfolioModal = () => {
   const [clickedItemId, setClickedItemId] = useState("");
@@ -9,14 +10,17 @@ const PortfolioModal = () => {
   const [desc, setDesc] = useState("");
   const [technology, setTechnology] = useState("");
   const [photo, setPhoto] = useState([]);
+  const [showPhotoModal,setShowPhotoModal] = useState(false)
 
   const clickedItem = (portfolioItem) => {
-    console.log(id);
+    // console.log(id);
     setClickedItemId(portfolioItem.id);
     setId(portfolioItem.id);
     setTitle(portfolioItem.title);
-    setDescription(portfolioItem.desc);
+    setDesc(portfolioItem.desc);
     setTechnology(portfolioItem.technology);
+    setPhoto(portfolioItem.photo);
+    console.log(portfolioItem.photo);
   };
 
   const closeClickedItem = () => {
@@ -31,6 +35,7 @@ const PortfolioModal = () => {
         border: "2px solid #f31111",
         borderRadius: "10px",
       }}>
+      {showPhotoModal && <PhotosModal setShowPhotoModal={setShowPhotoModal} photo={photo} setPhoto={setPhoto} />}
       <h3 style={{ textAlign: "center" }}>Persona Info</h3>
       <p>ID-Title-Name</p>
       {portfolio.map((portfolioItem, index) => (
@@ -99,6 +104,12 @@ const PortfolioModal = () => {
                     style={{ color: "white" }}
                     onChange={(e) => setTechnology(e.target.value)}
                   />
+                  <br />
+                  <button
+                    style={{ color: "red" }}
+                    onClick={() => setShowPhotoModal(!showPhotoModal)}>
+                    Photos
+                  </button>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
                   <div onClick={closeClickedItem}>
