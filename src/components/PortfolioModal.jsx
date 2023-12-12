@@ -36,8 +36,7 @@ const PortfolioModal = () => {
         borderRadius: "10px",
       }}>
       {showPhotoModal && <PhotosModal setShowPhotoModal={setShowPhotoModal} photo={photo} setPhoto={setPhoto} />}
-      <h3 style={{ textAlign: "center" }}>Persona Info</h3>
-      <p>ID-Title-Name</p>
+      <h3 style={{ textAlign: "center" }}>Portfolio Info</h3>
       {portfolio.map((portfolioItem, index) => (
         <div key={index}>
           <div

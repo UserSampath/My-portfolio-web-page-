@@ -93,12 +93,12 @@ export const personalInfo = [
 
   {
     id: 10,
-    title: "Langages : ",
+    title: "Languages : ",
     description: "Sinhala, English",
   },
   {
     id: 8,
-    title: "Email : ",
+    title: "Mail : ",
     description: "nalakasampathsmp@mail.com",
   },
 ];
