@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaTrash, FaPaperPlane,FaTimes } from "react-icons/fa";
+import { FaTrash, FaPaperPlane, FaTimes } from "react-icons/fa";
 import { personalInfo } from "../assets/data";
 
 const PersonalInfoModal = () => {
@@ -8,14 +8,12 @@ const PersonalInfoModal = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
 
-
   const clickedItem = (personalInfoItem) => {
     console.log(id);
     setClickedItemId(personalInfoItem.id);
     setId(personalInfoItem.id);
     setTitle(personalInfoItem.title);
     setDescription(personalInfoItem.description);
-
   };
 
   const closeClickedItem = () => {
@@ -26,7 +24,7 @@ const PersonalInfoModal = () => {
   return (
     <div
       style={{
-        margin: "30px 10px 10px 10px",
+        margin: "50px 10px 10px 10px",
         border: "2px solid #f31111",
         borderRadius: "10px",
       }}>

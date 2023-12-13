@@ -35,7 +35,13 @@ const PortfolioModal = () => {
         border: "2px solid #f31111",
         borderRadius: "10px",
       }}>
-      {showPhotoModal && <PhotosModal setShowPhotoModal={setShowPhotoModal} photo={photo} setPhoto={setPhoto} />}
+      {showPhotoModal && (
+        <PhotosModal
+          setShowPhotoModal={setShowPhotoModal}
+          photo={photo}
+          setPhoto={setPhoto}
+        />
+      )}
       <h3 style={{ textAlign: "center" }}>Portfolio Info</h3>
       {portfolio.map((portfolioItem, index) => (
         <div key={index}>
@@ -105,9 +111,14 @@ const PortfolioModal = () => {
                   />
                   <br />
                   <button
-                    style={{ color: "red" }}
+                    style={{
+                      border: "1px solid gray",
+                      borderRadius: "10px",
+                      margin: "10px 0 0 0",
+                      padding: "5px",
+                    }}
                     onClick={() => setShowPhotoModal(!showPhotoModal)}>
-                    Photos
+                    <h3>Photos</h3>
                   </button>
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>

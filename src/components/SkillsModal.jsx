@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaTrash, FaPaperPlane,FaTimes } from "react-icons/fa";
 import { skills } from "../assets/data";
 
@@ -7,7 +7,12 @@ const SkillsModal = () => {
   const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [percentage, setPercentage] = useState("");
-
+  const [clickedAddNewSkill, setClickedAddNewSkill] = useState(false);
+  useEffect(() => {
+    setId("");
+    setTitle("");
+    setPercentage("");
+  }, [clickedAddNewSkill]);
   const clickedItem = (skill) => {
     console.log(id);
     setClickedItemId(skill.id);
@@ -101,6 +106,59 @@ const SkillsModal = () => {
           )}
         </div>
       ))}
+      <div>
+        <button style={{border:"1px solid gray", borderRadius:"10px", margin:"10px"}} onClick={() => setClickedAddNewSkill(!clickedAddNewSkill)}>
+          <h3 style={{padding:"5px",}}>Add new</h3>
+        </button>
+
+        {clickedAddNewSkill && (
+          <>
+            <div style={{ background: "#343434", padding: "10px" }}>
+              <div style={{ display: "flex", justifyContent: "space-between" }}>
+                <div>
+                  <label htmlFor="id">ID:</label>
+                  <input
+                    type="text"
+                    id="id"
+                    value={id}
+                    style={{ color: "white" }}
+                    onChange={(e) => setId(e.target.value)}
+                  />
+                  <br />
+                  <label htmlFor="title">Title:</label>
+                  <input
+                    type="text"
+                    id="title"
+                    value={title}
+                    style={{ color: "white" }}
+                    onChange={(e) => setTitle(e.target.value)}
+                  />
+                  <br />
+                  <label htmlFor="description">Percentage:</label>
+                  <input
+                    value={percentage}
+                    type="text"
+                    id="description"
+                    style={{ color: "white" }}
+                    onChange={(e) => setPercentage(e.target.value)}
+                  />
+                </div>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <div onClick={()=>setClickedAddNewSkill(false)}>
+                    <FaTimes
+                      style={{ marginTop: "5px", marginRight: "20px" }}
+                    />
+                  </div>
+                  <FaPaperPlane
+                    style={{ marginTop: "5px", marginRight: "5px" }}
+                    onClick={() => console.log(personalInfoItem)}
+                  />
+                </div>
+              </div>
+            </div>
+          </>
+        )}
+      </div>
     </div>
   );
 };

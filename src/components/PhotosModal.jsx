@@ -20,7 +20,7 @@ const PhotosModal = ({ setShowPhotoModal, photo }) => {
           maxHeight: "80%", // Set a maximum height for the modal
           overflowY: "auto", // Add a scrollbar for vertical overflow
         }}>
-        <h3 style={{color:"black",textAlign:"center"}}>Photos</h3>
+        <h3 style={{ color: "black", textAlign: "center" }}>Photos</h3>
         {photo.map((p, index) => {
           return (
             <div key={index}>
@@ -59,12 +59,25 @@ const PhotosModal = ({ setShowPhotoModal, photo }) => {
         <br /> <br />
         <div style={{ display: "flex" }}>
           <button
-            style={{ color: "red" }}
+            style={{
+              color: "red",
+              border: "1px solid gray",
+              borderRadius: "10px",
+              margin: "0 10px 0 0",
+              padding: "5px",
+            }}
             onClick={() => setShowPhotoModal(false)}>
             Close
           </button>
           <button
-            style={{ color: "green", marginLeft: "20px" }}
+            style={{
+              color: "green",
+              marginLeft: "20px",
+              border: "1px solid gray",
+              borderRadius: "10px",
+              margin: "0 10px 0 0",
+              padding: "5px",
+            }}
             onClick={() => setShowPhotoModal(false)}>
             Add
           </button>

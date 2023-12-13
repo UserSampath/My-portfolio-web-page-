@@ -8,6 +8,7 @@ import StatsModal from "../../components/StatsModal";
 import ResumeModal from "../../components/ResumeModal";
 import SkillsModal from "../../components/SkillsModal";
 import PortfolioModal from "../../components/PortfolioModal";
+import Auth from "../../components/Auth";
 const Admin = () => {
   console.log(personalInfo);
   return (
@@ -25,12 +26,16 @@ const Admin = () => {
           background: "#212121",
           borderRadius: "10px",
         }}>
-              <PersonalInfoModal />
-              <StatsModal />
-              <ResumeModal />
-        <SkillsModal />
-        <PortfolioModal/>
+        <h2 className="section__title">
+          Admin <span>Settings</span>
+        </h2>
+<Auth/>
 
+        <PersonalInfoModal />
+        <StatsModal />
+        <ResumeModal />
+        <SkillsModal />
+        <PortfolioModal />
       </div>
     </div>
   );
