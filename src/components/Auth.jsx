@@ -3,21 +3,20 @@ import { auth, googleAuthProvider } from "../config/firebase";
 import { signInWithPopup, signOut, onAuthStateChanged } from "firebase/auth";
 
 const Auth = () => {
-    const [userEmail, setUserEmail] = useState("");
+  const [userEmail, setUserEmail] = useState("");
   const [userImage, setUserImage] = useState("");
-    
-
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
-          setUserEmail(user.email);
-          setUserImage(user.photoURL)
+        setUserEmail(user.email);
+        setUserImage(user.photoURL);
       } else {
         setUserEmail("");
       }
     });
     return () => unsubscribe();
   }, []);
+
 
   const signInWithGoogle = async () => {
     try {
@@ -36,7 +35,13 @@ const Auth = () => {
   };
 
   return (
-    <div style={{ display: "flex", alignItems: "center", gap: "10px",marginLeft:"20px" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        gap: "10px",
+        marginLeft: "20px",
+      }}>
       <button
         style={{
           border: "1px solid gray",

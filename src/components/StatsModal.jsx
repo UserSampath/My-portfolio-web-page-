@@ -1,23 +1,65 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import { FaTrash, FaPaperPlane,FaTimes } from "react-icons/fa";
-import { stats } from "../assets/data";
+// import { stats } from "../assets/data";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 const StatsModal = () => {
   const [clickedItemId, setClickedItemId] = useState("");
   const [id, setId] = useState("");
   const [no, setNo] = useState("");
   const [title, setTitle] = useState("");
+  const[stats,setStats] = useState([])
+
+  const statsCollectionRef = collection(db, "stats");
+  const getStats = async () => {
+    try {
+      const data = await getDocs(statsCollectionRef);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      const sortedPersonalInfo = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+      setStats(sortedPersonalInfo);
+      console.log(sortedPersonalInfo, "ssssss");
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+    useEffect(() => {
+      getStats();
+    }, []);
+  
+  
+   const updateStats = async (ID) => {
+     try {
+       const statsDoc = doc(db, "stats", ID);
+       await updateDoc(statsDoc, {
+         ID: id,
+         no:no,
+         title: title,
+       });
+       closeClickedItem();
+      getStats();
+     } catch (error) {
+       console.log(error);
+     }
+   };
+
+
 
   const clickedItem = (stat) => {
-    setClickedItemId(stat.id);
-    setId(stat.id);
+    setClickedItemId(stat.ID);
+    setId(stat.ID);
     setNo(stat.no);
     setTitle(stat.title);
   };
 
   const closeClickedItem = () => {
     console.log("Closing item");
-    setClickedItemId(123);
+    setClickedItemId(1222222223);
   };
 
   return (
@@ -42,7 +84,7 @@ const StatsModal = () => {
               borderRadius: "10px",
             }}>
             <div style={{ display: "flex" }}>
-              <p>{stat.id}</p>
+              <p>{stat.ID}</p>
             </div>
             <div style={{ display: "flex" }}>
               <p>{stat.no}</p>
@@ -50,10 +92,9 @@ const StatsModal = () => {
             <div style={{ display: "flex" }}>
               <p>{stat.title}</p>
             </div>
-            <FaTrash style={{ marginTop: "3px" }} />
           </div>
 
-          {clickedItemId === stat.id && (
+          {clickedItemId === stat.ID && (
             <div style={{ background: "#343434", padding: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
@@ -92,7 +133,7 @@ const StatsModal = () => {
                   </div>
                   <FaPaperPlane
                     style={{ marginTop: "5px", marginRight: "5px" }}
-                    onClick={() => console.log(stat)}
+                    onClick={() => updateStats(stat.id)}
                   />
                 </div>
               </div>

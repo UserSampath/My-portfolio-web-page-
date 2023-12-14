@@ -246,8 +246,6 @@ export const portfolio = [
     img: Work1,
     title: "Mobile Application",
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,orum.",
-    technology:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut",
     photo: [
       "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
       "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",

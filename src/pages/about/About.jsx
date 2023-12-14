@@ -1,16 +1,51 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./about.css";
 import Info from "../../components/Info";
 import Stats from "../../components/Stats";
 import { FaDownload } from "react-icons/fa";
 // import CV from "../../assets/Nalaka Sampath_SE.pdf";
 import Skills from "../../components/Skills";
-import { resume } from "../../assets/data";
 import ResumeItem from "../../components/ResumeItem";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../../config/firebase";
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 const About = () => {
+
+const [resume, setResume] = useState([]);
+useEffect(() => {
+  getResume();
+}, []);
+const resumeCollectionRef = collection(db, "resumeInfo");
+const getResume = async () => {
+  try {
+    const data = await getDocs(resumeCollectionRef);
+    const filteredData = data.docs.map((doc) => ({
+      ...doc.data(),
+      id: doc.id,
+    }));
+    const sortedResume = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+    setResume(sortedResume);
+    console.log(sortedResume, "ssssss");
+  } catch (error) {
+    console.log(error);
+  }
+};
+
   return (
     <main className="section container">
       <section className="about">

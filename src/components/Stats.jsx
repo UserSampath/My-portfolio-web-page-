@@ -1,7 +1,31 @@
-import React from "react";
-import parse from "html-react-parser"
-import { stats } from "../assets/data";
+import React, { useEffect, useState } from "react";
+import parse from "html-react-parser";
+import { collection, getDocs } from "firebase/firestore";
+import { db } from "../config/firebase";
+
 const Stats = () => {
+
+ const [stats, setStats] = useState([]);
+ useEffect(() => {
+   getStats();
+ }, []);
+ const statsCollectionRef = collection(db, "stats");
+ const getStats = async () => {
+   try {
+     const data = await getDocs(statsCollectionRef);
+     const filteredData = data.docs.map((doc) => ({
+       ...doc.data(),
+       id: doc.id,
+     }));
+     const sortedStats = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+     setStats(sortedStats);
+     console.log(sortedStats, "ssssss");
+   } catch (error) {
+     console.log(error);
+   }
+ };
+
   return (
     <>
       {stats.map(({ no, title }, index) => {

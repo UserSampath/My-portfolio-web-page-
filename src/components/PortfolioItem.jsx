@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import Close from "../assets/close.svg";
 
-const PortfolioItem = ({ img, title, desc, technology, photo }) => {
+const PortfolioItem = ({ img, title, desc, photo }) => {
   const [modal, setModal] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
 
@@ -49,12 +49,7 @@ const PortfolioItem = ({ img, title, desc, technology, photo }) => {
               {desc}
             </span>
             <br />
-            <span className="item__details" style={{ fontWeight: "bold" }}>
-              <h4 style={{ fontWeight: "bold", display: "inline" }}>
-                Technology:
-              </h4>{" "}
-              {technology}
-            </span>
+            <br />
 
             <ul className="modal__list ">
               <li className="modal__item">

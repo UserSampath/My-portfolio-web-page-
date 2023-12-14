@@ -1,22 +1,88 @@
+import { addDoc, collection, deleteDoc, doc, getDocs, updateDoc } from "firebase/firestore";
 import React, { useEffect, useState } from "react";
 import { FaTrash, FaPaperPlane,FaTimes } from "react-icons/fa";
-import { skills } from "../assets/data";
+import { db } from "../config/firebase";
+// import { skills } from "../assets/data";
 
 const SkillsModal = () => {
+
   const [clickedItemId, setClickedItemId] = useState("");
   const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [percentage, setPercentage] = useState("");
   const [clickedAddNewSkill, setClickedAddNewSkill] = useState(false);
+  const [skills, setSkills] = useState([]);
+
+ const skillCollectionRef = collection(db, "skill");
+ useEffect(() => {
+   getSkillData();
+ }, []);
+
+ const getSkillData = async () => {
+   try {
+     const data = await getDocs(skillCollectionRef);
+     const filteredData = data.docs.map((doc) => ({
+       ...doc.data(),
+       id: doc.id,
+     }));
+     const sortedSkill = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+     setSkills(sortedSkill);
+     console.log(sortedSkill, "ssssss");
+   } catch (error) {
+     console.log(error);
+   }
+ }; 
+
+const updateSkill = async (ID) => {
+  try {
+    console.log(id);
+
+    const skillDoc = doc(db, "skill", ID);
+
+      await updateDoc(skillDoc, {
+        ID: id,
+        title: title,
+        percentage: percentage
+      });
+      closeClickedItem();
+      getSkillData();
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+  const deleteSkill = async (ID) => { 
+    try {
+    const skillDoc = doc(db, "skill", ID);
+      deleteDoc(skillDoc);
+        closeClickedItem();
+        getSkillData();
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
+  const createNewSkill = async () => { 
+try {
+  await addDoc(skillCollectionRef, { ID: id, percentage: percentage, title: title });
+    setClickedAddNewSkill(false);
+   getSkillData();
+} catch (error) {
+  console.log(error);
+}
+  }
+
   useEffect(() => {
     setId("");
     setTitle("");
     setPercentage("");
   }, [clickedAddNewSkill]);
+
   const clickedItem = (skill) => {
     console.log(id);
-    setClickedItemId(skill.id);
-    setId(skill.id);
+    setClickedItemId(skill.ID);
+    setId(skill.ID);
     setTitle(skill.title);
     setPercentage(skill.percentage);
   };
@@ -48,7 +114,7 @@ const SkillsModal = () => {
               borderRadius: "10px",
             }}>
             <div style={{ display: "flex" }}>
-              <p>{skill.id}</p>
+              <p>{skill.ID}</p>
             </div>
             <div style={{ display: "flex" }}>
               <p>{skill.title}</p>
@@ -56,10 +122,13 @@ const SkillsModal = () => {
             <div style={{ display: "flex" }}>
               <p>{skill.percentage}</p>
             </div>
-            <FaTrash style={{ marginTop: "3px" }} />
+            <FaTrash
+              onClick={() => deleteSkill(skill.id)}
+              style={{ marginTop: "3px" }}
+            />
           </div>
 
-          {clickedItemId === skill.id && (
+          {clickedItemId === skill.ID && (
             <div style={{ background: "#343434", padding: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
@@ -98,7 +167,7 @@ const SkillsModal = () => {
                   </div>
                   <FaPaperPlane
                     style={{ marginTop: "5px", marginRight: "5px" }}
-                    onClick={() => console.log(personalInfoItem)}
+                    onClick={() => updateSkill(skill.id)}
                   />
                 </div>
               </div>
@@ -107,8 +176,14 @@ const SkillsModal = () => {
         </div>
       ))}
       <div>
-        <button style={{border:"1px solid gray", borderRadius:"10px", margin:"10px"}} onClick={() => setClickedAddNewSkill(!clickedAddNewSkill)}>
-          <h3 style={{padding:"5px",}}>Add new</h3>
+        <button
+          style={{
+            border: "1px solid gray",
+            borderRadius: "10px",
+            margin: "10px",
+          }}
+          onClick={() => setClickedAddNewSkill(!clickedAddNewSkill)}>
+          <h3 style={{ padding: "5px" }}>Add new</h3>
         </button>
 
         {clickedAddNewSkill && (
@@ -144,14 +219,14 @@ const SkillsModal = () => {
                   />
                 </div>
                 <div style={{ display: "flex", alignItems: "center" }}>
-                  <div onClick={()=>setClickedAddNewSkill(false)}>
+                  <div onClick={() => setClickedAddNewSkill(false)}>
                     <FaTimes
                       style={{ marginTop: "5px", marginRight: "20px" }}
                     />
                   </div>
                   <FaPaperPlane
                     style={{ marginTop: "5px", marginRight: "5px" }}
-                    onClick={() => console.log(personalInfoItem)}
+                    onClick={() => createNewSkill()}
                   />
                 </div>
               </div>

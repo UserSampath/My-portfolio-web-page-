@@ -8,7 +8,6 @@ const PortfolioModal = () => {
   const [id, setId] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
-  const [technology, setTechnology] = useState("");
   const [photo, setPhoto] = useState([]);
   const [showPhotoModal,setShowPhotoModal] = useState(false)
 
@@ -18,7 +17,6 @@ const PortfolioModal = () => {
     setId(portfolioItem.id);
     setTitle(portfolioItem.title);
     setDesc(portfolioItem.desc);
-    setTechnology(portfolioItem.technology);
     setPhoto(portfolioItem.photo);
     console.log(portfolioItem.photo);
   };
@@ -64,9 +62,6 @@ const PortfolioModal = () => {
             <div style={{ display: "flex" }}>
               <p>{portfolioItem.desc}</p>
             </div>
-            <div style={{ display: "flex" }}>
-              <p>{portfolioItem.technology}</p>
-            </div>
             <FaTrash style={{ marginTop: "3px" }} />
           </div>
 
@@ -99,15 +94,6 @@ const PortfolioModal = () => {
                     id="description"
                     style={{ color: "white" }}
                     onChange={(e) => setDesc(e.target.value)}
-                  />
-                  <br />
-                  <label htmlFor="description">Technology:</label>
-                  <input
-                    value={technology}
-                    type="text"
-                    id="description"
-                    style={{ color: "white" }}
-                    onChange={(e) => setTechnology(e.target.value)}
                   />
                   <br />
                   <button

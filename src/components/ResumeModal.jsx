@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaTrash, FaPaperPlane,FaTimes } from "react-icons/fa";
 import { resume } from "../assets/data";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 const ResumeModal = () => {
   const [clickedItemId, setClickedItemId] = useState("");
@@ -11,11 +13,52 @@ const ResumeModal = () => {
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
 
+  const [resume, setResume] = useState([]);
+   const resumeCollectionRef = collection(db, "resumeInfo");
+   useEffect(() => {
+     getResumeData();
+   }, []);
+
+   const getResumeData = async () => {
+     try {
+       const data = await getDocs(resumeCollectionRef);
+       const filteredData = data.docs.map((doc) => ({
+         ...doc.data(),
+         id: doc.id,
+       }));
+       const sortedResumeInfo = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+       setResume(sortedResumeInfo);
+       console.log(sortedResumeInfo, "ssssss");
+     } catch (error) {
+       console.log(error);
+     }
+  };
+  
+
+    const updatePersonalData = async (ID) => {
+      try {
+        const resumeInfoDoc = doc(db, "resumeInfo", ID);
+        await updateDoc(resumeInfoDoc, {
+          ID: id,
+          category: category,
+          icon: icon,
+          year: year,
+          title: title,
+          desc: desc,
+        });
+        closeClickedItem();
+        getResumeData();
+      } catch (error) {
+        console.log(error);
+      }
+    };
+
 
   const clickedItem = (resumeItem) => {
     console.log(id);
-    setClickedItemId(resumeItem.id);
-    setId(resumeItem.id);
+    setClickedItemId(resumeItem.ID);
+    setId(resumeItem.ID);
     setCategory(resumeItem.category);
     setIcon(resumeItem.icon);
     setYear(resumeItem.year);
@@ -52,7 +95,7 @@ const ResumeModal = () => {
             }}>
             <div>
               <div style={{ display: "flex" }}>
-                <p>{resumeItem.id}</p>
+                <p>{resumeItem.ID}</p>
               </div>
               <div style={{ display: "flex" }}>
                 <p>{resumeItem.category}</p>
@@ -70,18 +113,9 @@ const ResumeModal = () => {
                 <p>{resumeItem.desc}</p>
               </div>
             </div>
-            <FaTrash
-              style={{
-                position: "absolute",
-                top: "50%",
-                right: "10px",
-                transform: "translateY(-50%)",
-                cursor: "pointer",
-              }}
-            />
           </div>
 
-          {clickedItemId === resumeItem.id && (
+          {clickedItemId === resumeItem.ID && (
             <div style={{ background: "#343434", padding: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
@@ -144,7 +178,7 @@ const ResumeModal = () => {
                   </div>
                   <FaPaperPlane
                     style={{ marginTop: "5px", marginRight: "5px" }}
-                    onClick={() => console.log(personalInfoItem)}
+                    onClick={() => updatePersonalData(resumeItem.id)}
                   />
                 </div>
               </div>
