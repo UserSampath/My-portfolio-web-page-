@@ -1,20 +1,110 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaTrash, FaPaperPlane, FaTimes } from "react-icons/fa";
-import { portfolio } from "../assets/data";
 import PhotosModal from "./PhotosModal";
+import { collection, doc, getDocs, updateDoc } from "firebase/firestore";
+import { db } from "../config/firebase";
 
 const PortfolioModal = () => {
   const [clickedItemId, setClickedItemId] = useState("");
   const [id, setId] = useState("");
+  const [ID, setID] = useState("");
   const [title, setTitle] = useState("");
   const [desc, setDesc] = useState("");
+  const [img, setImg] = useState("");
   const [photo, setPhoto] = useState([]);
-  const [showPhotoModal,setShowPhotoModal] = useState(false)
+  const [showPhotoModal, setShowPhotoModal] = useState(false);
+  const [portfolio, setPortfolio] = useState([]);
+
+  const portfolioCollectionRef = collection(db, "portfolio");
+  useEffect(() => {
+    getPortfolioData();
+  }, []);
+
+  const getPortfolioData = async () => {
+    try {
+      const data = await getDocs(portfolioCollectionRef);
+      const filteredData = data.docs.map((doc) => ({
+        ...doc.data(),
+        id: doc.id,
+      }));
+      const sortedPortfolio = [...filteredData].sort((a, b) => a.ID - b.ID);
+
+      setPortfolio(sortedPortfolio);
+      console.log(sortedPortfolio, "ssssss");
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deletePortfolio = (portfolioItem) => {
+    console.log(portfolioItem.id);
+    getPortfolioData();
+  };
+
+  const updatePortfolio = async (portfolioItem) => {
+    try {
+      const portfolioDoc = doc(db, "portfolio", portfolioItem.id);
+      await updateDoc(portfolioDoc, {
+        ID: id,
+        desc: desc,
+        title: title,
+      });
+
+      closeClickedItem();
+      getPortfolioData();
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const addPhoto = async (id, photUrl, photo) => {
+    try {
+      if (photUrl != "") {
+        const portfolioDoc = doc(db, "portfolio", id);
+
+        const newPhoto = [...photo, photUrl];
+        console.log(newPhoto);
+
+        await updateDoc(portfolioDoc, {
+          photo: newPhoto,
+        });
+
+        setShowPhotoModal(false);
+        closeClickedItem();
+        getPortfolioData();
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  const deletePhoto = async (ID, photUrl, photo) => {
+    console.log(ID, photUrl, photo);
+
+    try {
+
+       const portfolioDoc = doc(db, "portfolio", ID);
+
+const updatedPhoto = photo.filter((url) => url !== photUrl);
+       console.log(updatedPhoto);
+       await updateDoc(portfolioDoc, {
+         photo: updatedPhoto,
+       });
+
+       setShowPhotoModal(false);
+       closeClickedItem();
+       getPortfolioData();
+     
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const clickedItem = (portfolioItem) => {
     // console.log(id);
-    setClickedItemId(portfolioItem.id);
-    setId(portfolioItem.id);
+    setClickedItemId(portfolioItem.ID);
+    setId(portfolioItem.ID);
+    setID(portfolioItem.id);
     setTitle(portfolioItem.title);
     setDesc(portfolioItem.desc);
     setPhoto(portfolioItem.photo);
@@ -37,7 +127,10 @@ const PortfolioModal = () => {
         <PhotosModal
           setShowPhotoModal={setShowPhotoModal}
           photo={photo}
+          id={ID}
           setPhoto={setPhoto}
+          addPhoto={addPhoto}
+          deletePhoto={deletePhoto}
         />
       )}
       <h3 style={{ textAlign: "center" }}>Portfolio Info</h3>
@@ -54,7 +147,7 @@ const PortfolioModal = () => {
               borderRadius: "10px",
             }}>
             <div style={{ display: "flex" }}>
-              <p>{portfolioItem.id}</p>
+              <p>{portfolioItem.ID}</p>
             </div>
             <div style={{ display: "flex" }}>
               <p>{portfolioItem.title}</p>
@@ -62,10 +155,13 @@ const PortfolioModal = () => {
             <div style={{ display: "flex" }}>
               <p>{portfolioItem.desc}</p>
             </div>
-            <FaTrash style={{ marginTop: "3px" }} />
+            <FaTrash
+              onClick={() => deletePortfolio(portfolioItem)}
+              style={{ marginTop: "3px" }}
+            />
           </div>
 
-          {clickedItemId === portfolioItem.id && (
+          {clickedItemId === portfolioItem.ID && (
             <div style={{ background: "#343434", padding: "10px" }}>
               <div style={{ display: "flex", justifyContent: "space-between" }}>
                 <div>
@@ -115,7 +211,7 @@ const PortfolioModal = () => {
                   </div>
                   <FaPaperPlane
                     style={{ marginTop: "5px", marginRight: "5px" }}
-                    onClick={() => console.log(portfolioItem)}
+                    onClick={() => updatePortfolio(portfolioItem)}
                   />
                 </div>
               </div>

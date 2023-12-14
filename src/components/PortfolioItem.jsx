@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 
 import Close from "../assets/close.svg";
 
+import Work1 from "../assets/app.png";
+import Work2 from "../assets/web.png";
+import Work3 from "../assets/ui.png";
+
+
 const PortfolioItem = ({ img, title, desc, photo }) => {
   const [modal, setModal] = useState(false);
   const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
@@ -16,7 +21,7 @@ const PortfolioItem = ({ img, title, desc, photo }) => {
     if (modal) {
       intervalId = setInterval(() => {
         setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photo.length);
-      }, 1500);
+      }, 1350);
     }
 
     return () => {
@@ -24,9 +29,23 @@ const PortfolioItem = ({ img, title, desc, photo }) => {
     };
   }, [modal, photo]);
 
+
+  const getImage = () => {
+
+    switch (img) {
+      case "Work1":
+        return Work1;
+      case "Work2":
+        return Work2;
+      default:
+        return Work3;
+    }
+    
+  }
+
   return (
     <div className="portfolio__item">
-      <img src={img} alt="" className="portfolio__img" />
+      <img src={getImage()} alt="" className="portfolio__img" />
 
       <div className="portfolio__hover" onClick={toggleModal}>
         <h3 className="portfolio__title">{title}</h3>

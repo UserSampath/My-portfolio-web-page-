@@ -1,8 +1,24 @@
 import React, { useState } from "react";
 import { FaTrash } from "react-icons/fa";
 
-const PhotosModal = ({ setShowPhotoModal, photo }) => {
+const PhotosModal = ({
+  setShowPhotoModal,
+  photo,
+  addPhoto,
+  id,
+  deletePhoto,
+}) => {
   const [photUrl, setPhotoUrl] = useState("");
+
+  const handleAddPhoto = (id) => {
+    addPhoto(id, photUrl, photo);
+    setShowPhotoModal(false);
+  };
+
+  const handleDeletePhoto = (p) => {
+    console.log(p);
+    deletePhoto(id, p, photo);
+  };
 
   return (
     <div>
@@ -33,6 +49,7 @@ const PhotosModal = ({ setShowPhotoModal, photo }) => {
                 }}>
                 <div style={{ display: "flex" }}>
                   <FaTrash
+                    onClick={() => handleDeletePhoto(p)}
                     style={{
                       color: "black",
                       marginRight: "10px",
@@ -78,7 +95,7 @@ const PhotosModal = ({ setShowPhotoModal, photo }) => {
               margin: "0 10px 0 0",
               padding: "5px",
             }}
-            onClick={() => setShowPhotoModal(false)}>
+            onClick={() => handleAddPhoto(id)}>
             Add
           </button>
         </div>
