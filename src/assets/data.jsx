@@ -13,7 +13,6 @@ import Work1 from "./app.png";
 import Work2 from "./web.png";
 import Work3 from "./ui.png";
 
-
 import Theme1 from "./purple.png";
 import Theme2 from "./red.png";
 import Theme3 from "./blueviolet.png";
@@ -71,7 +70,7 @@ export const personalInfo = [
   {
     id: 3,
     title: "Age : ",
-    description: "23 Years",
+    description: "24 Years",
   },
 
   {
@@ -94,12 +93,12 @@ export const personalInfo = [
 
   {
     id: 10,
-    title: "Langages : ",
+    title: "Languages : ",
     description: "Sinhala, English",
   },
   {
     id: 8,
-    title: "Email : ",
+    title: "Mail : ",
     description: "nalakasampathsmp@mail.com",
   },
 ];
@@ -113,19 +112,19 @@ export const stats = [
 
   {
     id: 2,
-    no: "5+",
+    no: "7+",
     title: "Completed <br /> Projects",
   },
 
   {
     id: 3,
-    no: "29+",
+    no: "50+",
     title: "Pull <br /> Requests",
   },
 
   {
     id: 4,
-    no: "200+",
+    no: "350+",
     title: " Github <br /> commits",
   },
 ];
@@ -134,7 +133,7 @@ export const resume = [
   {
     id: 1,
     category: "experience",
-    icon: <FaBriefcase />,
+    icon: "experience",
     year: "2022 - PRESENT",
     title: "Volunteer <span> Leo Club </span>",
     desc: "Contributed to the projects organized by Leo Club of University of Moratuwa",
@@ -143,7 +142,7 @@ export const resume = [
   {
     id: 3,
     category: "experience",
-    icon: <FaBriefcase />,
+    icon: "experience",
     year: "2019 - 2020",
     title: "Accountant <span> Nethmini Agro Export Pvt Ltd </span>",
     desc: "As an Accountant , I played a crucial role in managing the financial aspects of the company.",
@@ -152,7 +151,7 @@ export const resume = [
   {
     id: 2,
     category: "experience",
-    icon: <FaBriefcase />,
+    icon: "experience",
     year: "2016 - 2018",
     title: "Senior prefect <span> Wajirawansha M.V </span>",
     desc: "As a Senior Prefect, I held a position of responsibility and leadership within the school community.",
@@ -161,7 +160,7 @@ export const resume = [
   {
     id: 4,
     category: "education",
-    icon: <FaGraduationCap />,
+    icon: "education",
     year: "PRESENT",
     title: "B.sc.(Hons) IT&M <span>University of Moratuwa</span>",
     desc: "I am a second year undergraduate of the University of Moratuwa having Current GPA: 3.15",
@@ -170,7 +169,7 @@ export const resume = [
   {
     id: 5,
     category: "education",
-    icon: <FaGraduationCap />,
+    icon: "education",
     year: "2021",
     title: "Web development course <span> VICERANT INSTITUTE </span>",
     desc: "I learnt the basics of web development technologies like HTML,CSS,JavaScript,PHP,Bootstrap",
@@ -179,7 +178,7 @@ export const resume = [
   {
     id: 6,
     category: "education",
-    icon: <FaGraduationCap />,
+    icon: "education",
     year: "2019",
     title: "G.C.E Advanced Level <span> commerce stream </span>",
     desc: "District Rank - 21, ICT-A, Accounting-A, Economics-A ",
@@ -234,6 +233,11 @@ export const skills = [
     title: "MongoDB",
     percentage: "80",
   },
+  {
+    id: 9,
+    title: "ReactNative",
+    percentage: "75",
+  },
 ];
 
 export const portfolio = [
@@ -241,25 +245,38 @@ export const portfolio = [
     id: 1,
     img: Work1,
     title: "Mobile Application",
-    details: [
-      {
-        icon: <FaCode />,
-        title: "Technology : ",
-        desc: "Flutter",
-      },
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,orum.",
+    photo: [
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
     ],
   },
-
   {
     id: 2,
     img: Work2,
     title: "Website Design",
-    details: [
-      {
-        icon: <FaCode />,
-        title: "Technology : ",
-        desc: "MERN stack ",
-      },
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,orum.",
+    technology:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut",
+    photo: [
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
     ],
   },
 
@@ -267,12 +284,12 @@ export const portfolio = [
     id: 3,
     img: Work3,
     title: "UI/UX",
-    details: [
-      {
-        icon: <FaCode />,
-        title: "Technology : ",
-        desc: "Figma",
-      },
+    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,orum.",
+    technology:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut",
+    photo: [
+      "https://wallpapers.com/images/high/clobbopus-pokemon-level-1-a4wxcnd8vd3sojpf.webp",
+      "https://wallpapers.com/images/high/clobbopus-blue-ydm2uwrk5x4rzhlo.webp",
     ],
   },
 ];

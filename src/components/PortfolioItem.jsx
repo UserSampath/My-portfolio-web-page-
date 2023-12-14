@@ -1,15 +1,51 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Close from "../assets/close.svg";
 
-const PortfolioItem = ({ img, title, details }) => {
+import Work1 from "../assets/app.png";
+import Work2 from "../assets/web.png";
+import Work3 from "../assets/ui.png";
+
+
+const PortfolioItem = ({ img, title, desc, photo }) => {
   const [modal, setModal] = useState(false);
+  const [currentPhotoIndex, setCurrentPhotoIndex] = useState(0);
+
   const toggleModal = () => {
     setModal(!modal);
   };
+
+  useEffect(() => {
+    let intervalId;
+
+    if (modal) {
+      intervalId = setInterval(() => {
+        setCurrentPhotoIndex((prevIndex) => (prevIndex + 1) % photo.length);
+      }, 1350);
+    }
+
+    return () => {
+      clearInterval(intervalId);
+    };
+  }, [modal, photo]);
+
+
+  const getImage = () => {
+
+    switch (img) {
+      case "Work1":
+        return Work1;
+      case "Work2":
+        return Work2;
+      default:
+        return Work3;
+    }
+    
+  }
+
   return (
     <div className="portfolio__item">
-      <img src={img} alt="" className="portfolio__img" />
+      <img src={getImage()} alt="" className="portfolio__img" />
 
       <div className="portfolio__hover" onClick={toggleModal}>
         <h3 className="portfolio__title">{title}</h3>
@@ -18,23 +54,33 @@ const PortfolioItem = ({ img, title, details }) => {
       {modal && (
         <div className="portfolio__modal">
           <div className="portfolio__modal-content">
-            <img src={Close} alt="" className="modal__close" onClick={toggleModal} />
+            <img
+              src={Close}
+              alt=""
+              className="modal__close"
+              onClick={toggleModal}
+            />
             <h3 className="modal__title">{title}</h3>
-            <ul className="modal__list grid">
-              {details.map(({ icon, title, desc }, index) => {
-                return (
-                  <li className="modal__item" key={index}>
-                    <span className="item__icon">{icon}</span>
-                    <div>
-                      <span className="item__title">{title}</span>
-                      <span className="item__details">{desc}</span>
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
+            <span className="item__details" style={{ fontWeight: "bold" }}>
+              <h4 style={{ fontWeight: "bold", display: "inline" }}>
+                Description:
+              </h4>{" "}
+              {desc}
+            </span>
+            <br />
+            <br />
 
-            <img src={img} alt="" className="modal__img" />
+            <ul className="modal__list ">
+              <li className="modal__item">
+                <div>
+                  <img
+                    src={photo[currentPhotoIndex]}
+                    alt=""
+                    className="modal__img"
+                  />
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
       )}

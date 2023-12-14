@@ -6,7 +6,7 @@
 :root {
   /* ===Colors===*/
   /*Color mod HSL (hue,saturation,lightness*/
-  --first-color: hsl(271, 76%, 53%);
+  --first-color: #fa5a0f;
   --title-color: hsl(0, 0%, 40%);
   --text-color: hsl(0, 0%, 50%);
   --body-color: hsl(0, 0%, 100%);
@@ -31,7 +31,7 @@
   /* ===Fonts weight===*/
 
   --weight-400: 400;
-  --: 500;
+  --weight-500: 500;
   --weight-600: 600;
   --weight-700: 700;
   --weight-800: 800;
