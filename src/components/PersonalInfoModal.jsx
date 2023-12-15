@@ -27,7 +27,6 @@ const PersonalInfoModal = () => {
       const sortedPersonalInfo = [...filteredData].sort((a, b) => a.ID - b.ID);
 
       setPersonalInfo(sortedPersonalInfo);
-      console.log(sortedPersonalInfo,"ssssss");
     } catch (error) {
       console.log(error);
     }
@@ -51,13 +50,11 @@ const PersonalInfoModal = () => {
   const clickedItem = (personalInfoItem) => {
     setClickedItemId(personalInfoItem.ID);
     setId(personalInfoItem.ID);
-    console.log(personalInfoItem.ID);
     setTitle(personalInfoItem.title);
     setDescription(personalInfoItem.description);
   };
 
   const closeClickedItem = () => {
-    console.log("Closing item");
     setClickedItemId(112412414141413);
   };
 

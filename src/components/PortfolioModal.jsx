@@ -30,14 +30,12 @@ const PortfolioModal = () => {
       const sortedPortfolio = [...filteredData].sort((a, b) => a.ID - b.ID);
 
       setPortfolio(sortedPortfolio);
-      console.log(sortedPortfolio, "ssssss");
     } catch (error) {
       console.log(error);
     }
   };
 
   const deletePortfolio = (portfolioItem) => {
-    console.log(portfolioItem.id);
     getPortfolioData();
   };
 
@@ -63,7 +61,6 @@ const PortfolioModal = () => {
         const portfolioDoc = doc(db, "portfolio", id);
 
         const newPhoto = [...photo, photUrl];
-        console.log(newPhoto);
 
         await updateDoc(portfolioDoc, {
           photo: newPhoto,
@@ -79,14 +76,12 @@ const PortfolioModal = () => {
   };
 
   const deletePhoto = async (ID, photUrl, photo) => {
-    console.log(ID, photUrl, photo);
 
     try {
 
        const portfolioDoc = doc(db, "portfolio", ID);
 
 const updatedPhoto = photo.filter((url) => url !== photUrl);
-       console.log(updatedPhoto);
        await updateDoc(portfolioDoc, {
          photo: updatedPhoto,
        });
@@ -101,18 +96,15 @@ const updatedPhoto = photo.filter((url) => url !== photUrl);
   };
 
   const clickedItem = (portfolioItem) => {
-    // console.log(id);
     setClickedItemId(portfolioItem.ID);
     setId(portfolioItem.ID);
     setID(portfolioItem.id);
     setTitle(portfolioItem.title);
     setDesc(portfolioItem.desc);
     setPhoto(portfolioItem.photo);
-    console.log(portfolioItem.photo);
   };
 
   const closeClickedItem = () => {
-    console.log("Closing item");
     setClickedItemId(123);
   };
 

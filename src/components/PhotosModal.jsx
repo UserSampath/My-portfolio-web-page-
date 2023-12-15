@@ -16,7 +16,7 @@ const PhotosModal = ({
   };
 
   const handleDeletePhoto = (p) => {
-    console.log(p);
+   
     deletePhoto(id, p, photo);
   };
 

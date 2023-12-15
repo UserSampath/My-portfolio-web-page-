@@ -22,7 +22,6 @@ const StatsModal = () => {
       const sortedPersonalInfo = [...filteredData].sort((a, b) => a.ID - b.ID);
 
       setStats(sortedPersonalInfo);
-      console.log(sortedPersonalInfo, "ssssss");
     } catch (error) {
       console.log(error);
     }
@@ -58,7 +57,6 @@ const StatsModal = () => {
   };
 
   const closeClickedItem = () => {
-    console.log("Closing item");
     setClickedItemId(1222222223);
   };
 

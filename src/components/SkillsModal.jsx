@@ -28,7 +28,6 @@ const SkillsModal = () => {
      const sortedSkill = [...filteredData].sort((a, b) => a.ID - b.ID);
 
      setSkills(sortedSkill);
-     console.log(sortedSkill, "ssssss");
    } catch (error) {
      console.log(error);
    }
@@ -36,7 +35,6 @@ const SkillsModal = () => {
 
 const updateSkill = async (ID) => {
   try {
-    console.log(id);
 
     const skillDoc = doc(db, "skill", ID);
 
@@ -80,7 +78,6 @@ try {
   }, [clickedAddNewSkill]);
 
   const clickedItem = (skill) => {
-    console.log(id);
     setClickedItemId(skill.ID);
     setId(skill.ID);
     setTitle(skill.title);
@@ -88,7 +85,6 @@ try {
   };
 
   const closeClickedItem = () => {
-    console.log("Closing item");
     setClickedItemId("");
   };
 

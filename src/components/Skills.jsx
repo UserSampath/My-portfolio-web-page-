@@ -22,7 +22,6 @@ const getSkills = async () => {
     const sortedSkills = [...filteredData].sort((a, b) => a.ID - b.ID);
 
     setSkills(sortedSkills);
-    console.log(sortedSkills, "ssssss");
   } catch (error) {
     console.log(error);
   }

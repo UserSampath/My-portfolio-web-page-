@@ -24,7 +24,6 @@ const Info = () => {
         );
 
         setPersonalInfo(sortedPersonalInfo);
-        console.log(sortedPersonalInfo, "ssssss");
       } catch (error) {
         console.log(error);
       }

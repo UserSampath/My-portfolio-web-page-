@@ -10,7 +10,6 @@ import SkillsModal from "../../components/SkillsModal";
 import PortfolioModal from "../../components/PortfolioModal";
 import Auth from "../../components/Auth";
 const Admin = () => {
-  console.log(personalInfo);
   return (
     <div
       style={{

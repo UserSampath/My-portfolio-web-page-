@@ -25,7 +25,6 @@ const Portfolio = () => {
      const sortedPortfolio = [...filteredData].sort((a, b) => a.ID - b.ID);
 
      setPortfolio(sortedPortfolio);
-     console.log(sortedPortfolio, "ssssss");
    } catch (error) {
      console.log(error);
    }

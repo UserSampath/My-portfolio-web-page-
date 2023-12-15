@@ -20,7 +20,6 @@ const Stats = () => {
      const sortedStats = [...filteredData].sort((a, b) => a.ID - b.ID);
 
      setStats(sortedStats);
-     console.log(sortedStats, "ssssss");
    } catch (error) {
      console.log(error);
    }

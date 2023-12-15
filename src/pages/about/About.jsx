@@ -40,7 +40,6 @@ const getResume = async () => {
     const sortedResume = [...filteredData].sort((a, b) => a.ID - b.ID);
 
     setResume(sortedResume);
-    console.log(sortedResume, "ssssss");
   } catch (error) {
     console.log(error);
   }

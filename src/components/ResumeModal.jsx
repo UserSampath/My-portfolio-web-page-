@@ -29,7 +29,6 @@ const ResumeModal = () => {
        const sortedResumeInfo = [...filteredData].sort((a, b) => a.ID - b.ID);
 
        setResume(sortedResumeInfo);
-       console.log(sortedResumeInfo, "ssssss");
      } catch (error) {
        console.log(error);
      }
@@ -56,7 +55,6 @@ const ResumeModal = () => {
 
 
   const clickedItem = (resumeItem) => {
-    console.log(id);
     setClickedItemId(resumeItem.ID);
     setId(resumeItem.ID);
     setCategory(resumeItem.category);
@@ -68,7 +66,6 @@ const ResumeModal = () => {
   };
 
   const closeClickedItem = () => {
-    console.log("Closing item");
     setClickedItemId(123);
   };
 
