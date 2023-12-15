@@ -9,7 +9,9 @@ import {
 import { FiSend, FiGithub } from "react-icons/fi";
 import { SiSololearn } from "react-icons/si";
 import "./contact.css";
+import { useNavigate } from "react-router-dom";
 const Contact = () => {
+   const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xleydleb");
     if (state.succeeded) {
       return <p>Thanks for joining!</p>;
@@ -24,8 +26,9 @@ const Contact = () => {
         <div className="contact__data">
           <h3 className="contact__title">
             <p className="contact__description">
-              Feel free to get in touch via email or phone, and let's connect
-              and create something amazing together!
+              Feel free to get in{" "}
+              <span onClick={() => navigate("/admin")}>touch</span> via email or
+              phone, and let's connect and create something amazing together!
             </p>
             <div className="contact__info">
               <div className="info__item">
