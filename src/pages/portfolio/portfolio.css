@@ -45,13 +45,13 @@
   z-index: 1000;
   display: grid;
   place-items: center;
-  padding: 15px;
+  padding: 10px;
 }
 .portfolio__modal-content {
   background-color: var(--container-color);
   max-width: 650px;
   width: 100%;
-  padding: 32px;
+  padding: 22px;
   border-radius: 10px;
   position: relative;
 }
@@ -81,6 +81,7 @@
 .modal__item{
     display: flex;
     align-items: center;
+    justify-content: center;
     column-gap: 8px;
 
 }
@@ -100,5 +101,5 @@
 .modal__img {
   width: 100%;
   height: 350px;
-  object-fit: cover;
+  /* object-fit: cover; */
 }

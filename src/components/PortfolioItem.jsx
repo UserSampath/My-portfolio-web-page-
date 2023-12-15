@@ -68,12 +68,13 @@ const PortfolioItem = ({ img, title, desc, photo }) => {
               {desc}
             </span>
             <br />
-            <br />
+         <br/>
 
             <ul className="modal__list ">
               <li className="modal__item">
-                <div>
+                <div >
                   <img
+                    
                     src={photo[currentPhotoIndex]}
                     alt=""
                     className="modal__img"
