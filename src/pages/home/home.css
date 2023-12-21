@@ -50,11 +50,11 @@
 }
 
 .color__block{
-    position: fixed;
+    /* position: fixed;
     height: 200%;
     width: 100%;
     background-color: var(--first-color);
     top: -50%;
     left: -83%;
-    transform: rotate(-15deg);
+    transform: rotate(-15deg); */
 }

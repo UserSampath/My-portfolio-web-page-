@@ -3,13 +3,13 @@ import { getAuth, GoogleAuthProvider } from "firebase/auth"
 import{getFirestore} from "firebase/firestore"
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAW9_CR-DzZstLv1PZon5poc0sf2j5gvb4",
-  authDomain: "portfolio-dc498.firebaseapp.com",
-  projectId: "portfolio-dc498",
-  storageBucket: "portfolio-dc498.appspot.com",
-  messagingSenderId: "748594522231",
-  appId: "1:748594522231:web:19a1076b655ccafdbc7e72",
-  measurementId: "G-YNF4CD96TZ"
+  apiKey: "AIzaSyAsIJaIjwTQtIKLE_UPAjRIu5hF5wR_3hY",
+  authDomain: "nalaka-sampath.firebaseapp.com",
+  projectId: "nalaka-sampath",
+  storageBucket: "nalaka-sampath.appspot.com",
+  messagingSenderId: "87712975240",
+  appId: "1:87712975240:web:31fd89121a4f5b1ab3523d",
+  measurementId: "G-73NWJVSJDM"
 };
 
 const app = initializeApp(firebaseConfig);  
