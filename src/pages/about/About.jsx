@@ -9,20 +9,6 @@ import ResumeItem from "../../components/ResumeItem";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../../config/firebase";
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 const About = () => {
 
 const [resume, setResume] = useState([]);
