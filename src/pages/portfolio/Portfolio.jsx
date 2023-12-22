@@ -36,7 +36,7 @@ const Portfolio = () => {
         My <span>Portfolio</span>
       </h2>
       <div className=" container ">
-        <div style={{ display: "flex" }}>
+        <div className="portfolioItemContainer">
           {" "}
           {portfolio.map((item) => {
             return <PortfolioItem key={item.id} {...item} />;
