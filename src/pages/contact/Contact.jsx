@@ -26,7 +26,7 @@ const Contact = () => {
         <div className="contact__data">
           <h3 className="contact__title">
             <p className="contact__description">
-              Feel free to get in{" "}
+             get in{" "}
               <span onClick={() => navigate("/admin")}>touch</span> via email or
               phone, and let's connect and create something amazing together!
             </p>

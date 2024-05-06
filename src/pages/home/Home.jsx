@@ -6,11 +6,19 @@ import { FaArrowRight } from "react-icons/fa";
 const Home = () => {
   return (
     <section className="home section grid">
-      <img src={Profile} alt="" className="home__img" />
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          height: "120%",
+        }}>
+        <img src={Profile} alt="" className="home__img" />
+      </div>
       <div className="home__content">
         <div className="home__data">
           <h1 className="home__title">
-            <span>I'm Nalaka Sampath.</span> <br/> Full Stack Developer
+            <span>I'm Nalaka Sampath.</span> <br /> Full Stack Developer
           </h1>
           <p className="home__description">
             I am a passionate and motivated person, dedicated to exploring new
