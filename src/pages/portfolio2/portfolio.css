@@ -1,0 +1,13 @@
+.portfolio_container{
+  display: flex;
+  justify-content: center;
+  margin: 0 300px 0 300px;
+}
+
+.portfolio_card{
+  background-color: rgba(99, 99, 99, 0.064);
+  width: 100%;
+  padding: 20px;
+  border-radius: 5px;
+  
+}
