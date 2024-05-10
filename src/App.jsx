@@ -10,6 +10,7 @@ import Portfolio from "./pages/portfolio/Portfolio";
 import Contact from "./pages/contact/Contact";
 import Themes from "./components/Themes";
 import Admin from "./pages/Admin/Admin";
+import Portfolio2 from "./pages/portfolio2/Portfolio2";
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
         <Route path="portfolio" element={<Portfolio />}></Route>
         <Route path="contact" element={<Contact />}></Route>
         <Route path="admin" element={<Admin />}></Route>
+        <Route path="portfolio2" element={<Portfolio2 />}></Route>
       </Routes>
     </BrowserRouter>
   );
