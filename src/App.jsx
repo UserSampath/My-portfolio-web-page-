@@ -11,8 +11,6 @@ import Contact from "./pages/contact/Contact";
 import Themes from "./components/Themes";
 import Admin from "./pages/Admin/Admin";
 import Portfolio2 from "./pages/portfolio2/Portfolio2";
-
-
 function App() {
   return (
     <BrowserRouter>
