@@ -37,25 +37,36 @@ const getResume = async () => {
         <h2 className="section__title">
           About <span>Me</span>
         </h2>
+        <div className="separator"></div>
+        <h3 className="section__subtitle subtitle_center">
+          Personal Information
+        </h3>
         <div className="about__container grid">
           <div className="about__info">
-            <h3 className="section__subtitle">Personal Information</h3>
             <ul className="info__list grid">
               <Info />
             </ul>
-            <a
-              href="https://drive.google.com/drive/folders/1es9V4G3Vkp99GHWrSMwMYQCfp2flk73u?usp=drive_link"
-              download=""
-              className="button">
-              Download Cv{" "}
-              <span className="button__icon">
-                <FaDownload />
-              </span>
-            </a>
           </div>
           <div className="stats grid">
             <Stats />
           </div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            marginTop:"20px"
+          }}>
+          <a
+            href="https://drive.google.com/drive/folders/1es9V4G3Vkp99GHWrSMwMYQCfp2flk73u?usp=drive_link"
+            download=""
+            className="button">
+            Download Cv{" "}
+            <span className="button__icon">
+              <FaDownload />
+            </span>
+          </a>
         </div>
       </section>
       <div className="separator"></div>
