@@ -23,6 +23,31 @@ import Theme7 from "./yellowgreen.png";
 import Theme8 from "./orange.png";
 import Theme9 from "./green.png";
 import Theme10 from "./yellow.png";
+import ChatVistaWithLogo from "./chatVista_withLogo.png";
+import ChatVista from "./chatVista.png";
+import OiJo from "./oijo.png";
+import OiJo_withLogo from "./oijo_withLogo.png";
+
+import occWithLogo from "./occ_withLogo.png";
+import occ from "./occ.png";
+
+
+import pmsWithLogo from "./pms_withLogo.png";
+import pms from "./pms.png";
+
+
+
+export const photos = {
+  ChatVista,
+  ChatVistaWithLogo,
+  OiJo,
+  OiJo_withLogo,
+  occWithLogo,
+  occ,
+  pmsWithLogo,
+  pms,
+};
+
 
 export const links = [
   {

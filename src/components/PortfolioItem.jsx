@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import Close from "../assets/close.svg";
+
 
 import Work1 from "../assets/app.png";
 import Work2 from "../assets/web.png";
@@ -40,7 +40,6 @@ const PortfolioItem = ({ img, title, desc, photo }) => {
       default:
         return Work3;
     }
-    
   }
 
   return (
@@ -65,7 +64,7 @@ const PortfolioItem = ({ img, title, desc, photo }) => {
               <span className="item__details" style={{ fontWeight: "bold" }}>
                 <h4 style={{ fontWeight: "bold", display: "inline" }}>
                   Description:
-                </h4>{" "}
+                </h4>
                 {desc}
               </span>
               <br />
