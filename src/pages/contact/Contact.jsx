@@ -10,6 +10,7 @@ import { FiSend, FiGithub } from "react-icons/fi";
 import { SiSololearn } from "react-icons/si";
 import "./contact.css";
 import { useNavigate } from "react-router-dom";
+
 const Contact = () => {
    const navigate = useNavigate();
   const [state, handleSubmit] = useForm("xleydleb");
@@ -26,7 +27,7 @@ const Contact = () => {
         <div className="contact__data">
           <h3 className="contact__title">
             <p className="contact__description">
-             get in{" "}
+             Get in{" "}
               <span onClick={() => navigate("/admin")}>touch</span> via email or
               phone, and let's connect and create something amazing together!
             </p>

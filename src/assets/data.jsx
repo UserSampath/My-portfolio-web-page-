@@ -35,6 +35,11 @@ import occ from "./occ.png";
 import pmsWithLogo from "./pms_withLogo.png";
 import pms from "./pms.png";
 
+import jcgnWithLogo from "./jcgnLogo.png";
+import jcgn from "./jcgn.png";
+
+import deltaMaxLogo from "./deltaMaxLogo.png";
+import deltaMax from "./deltaMax.png";
 
 
 export const photos = {
@@ -46,6 +51,10 @@ export const photos = {
   occ,
   pmsWithLogo,
   pms,
+  jcgnWithLogo,
+  jcgn,
+  deltaMaxLogo,
+  deltaMax,
 };
 
 

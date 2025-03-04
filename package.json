@@ -10,13 +10,17 @@
   },
   "dependencies": {
     "@formspree/react": "^2.4.4",
+    "@tsparticles/react": "^3.0.0",
+    "@tsparticles/slim": "^3.8.1",
     "firebase": "^10.7.1",
+    "framer-motion": "^12.4.10",
     "html-react-parser": "^4.0.0",
     "react": "^18.2.0",
     "react-circular-progressbar": "^2.1.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.8.0",
-    "react-router-dom": "^6.14.1"
+    "react-router-dom": "^6.14.1",
+    "tsparticles-slim": "^2.12.0"
   },
   "devDependencies": {
     "@types/react": "^18.0.28",
