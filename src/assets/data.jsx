@@ -41,6 +41,8 @@ import jcgn from "./jcgn.png";
 import deltaMaxLogo from "./deltaMaxLogo.png";
 import deltaMax from "./deltaMax.png";
 
+import jcgnAdminWithLogo from "./jcgnAdminWithLogo.png";
+import jcgnAdmin from "./jcgnAdmin.png";
 
 export const photos = {
   ChatVista,
@@ -55,6 +57,8 @@ export const photos = {
   jcgn,
   deltaMaxLogo,
   deltaMax,
+  jcgnAdminWithLogo,
+  jcgnAdmin,
 };
 
 

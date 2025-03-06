@@ -27,9 +27,9 @@ const Contact = () => {
         <div className="contact__data">
           <h3 className="contact__title">
             <p className="contact__description">
-             Get in{" "}
-              <span onClick={() => navigate("/admin")}>touch</span> via email or
-              phone, and let's connect and create something amazing together!
+              Get in <span onClick={() => navigate("/admin")}>touch</span> via
+              email or phone, and let's connect and create something amazing
+              together!
             </p>
             <div className="contact__info">
               <div className="info__item">
@@ -66,7 +66,7 @@ const Contact = () => {
                 <SiSololearn />
               </a>
               <a
-                href="https://medium.com/@nalakasampathsmp"
+                href="https://medium.com/@nalaka_sampath"
                 className="contact__social-link">
                 <FaMedium />
               </a>
