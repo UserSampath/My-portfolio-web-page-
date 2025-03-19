@@ -1,6 +1,8 @@
 /*=====================Google fonts ============= */
 
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600&family=Poppins:wght@500;600;800&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Livvic:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap');
+
 
 /*=====================CSS VARIABLES ============= */
 :root {
@@ -35,6 +37,34 @@
   --weight-600: 600;
   --weight-700: 700;
   --weight-800: 800;
+}
+
+.pharagraphContainer{
+  width: 70%;
+  text-align: justify;
+  margin-top: 10px;
+  line-height: 140%;
+  font-family: "Livvic", sans-serif;
+
+}
+
+.loading-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3); /* Transparent black background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it appears on top of other elements */
+}
+
+.loading-text {
+  font-size: 2rem;
+  color: white;
+  font-weight: bold;
 }
 
 .dark-theme {

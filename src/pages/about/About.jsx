@@ -598,9 +598,7 @@ const getResume = async () => {
       )}
       <main className="section container">
         <section className="about">
-          <h2
-          
-            className="section__title">
+          <h2 className="section__title">
             About <span>Me</span>
           </h2>
           <div className="separator"></div>
@@ -639,7 +637,7 @@ const getResume = async () => {
         <section className="skills">
           <h3 className="section__subtitle subtitle_center">My Skills</h3>
           <div className="skills__container grid">
-            <Skills />
+            <Skills color={particleColor} />
           </div>
         </section>
         <div className="separator"></div>

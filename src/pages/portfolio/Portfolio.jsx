@@ -65,12 +65,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Chat Vista is an innovative real-time video conferencing and
                     collaboration platform designed to provide users with a
                     seamless and efficient way to conduct online meetings.
@@ -87,13 +82,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     The development of Chat Vista involved a robust technology
                     stack to ensure high performance and scalability. The
                     frontend was built using React.js, providing a dynamic and
@@ -112,13 +101,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     My role in this project extended across all aspects of
                     development, from conceptualization to implementation. As
                     the creator of Chat Vista, I designed and built the
@@ -135,13 +118,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Chat Vista stands out as a reliable and accessible
                     alternative to paid conferencing tools, offering a rich set
                     of features without compromising performance. By leveraging
@@ -150,6 +127,15 @@ const Portfolio = () => {
                     collaborate effortlessly in real-time.
                   </div>
                 </div>{" "}
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, Node.Js, WebRTC, Socket.io, Bootstrap
+                    <br />
+                    Role: full-stack developer
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -175,12 +161,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Oi Jo is a car rental management application developed as
                     part of a client project during my internship. The client, a
                     business owner in the car rental industry, required a
@@ -195,13 +176,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     As a frontend developer on this project, my primary focus
                     was on building and refining the user interface for car
                     owners. This involved designing intuitive and interactive
@@ -217,13 +192,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     In addition to my frontend contributions, I was also
                     involved in backend development, specifically in
                     implementing the payment gateway for the platform. To enable
@@ -239,19 +208,22 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Through my work on both frontend and backend development, I
                     gained hands-on experience in React.js, API integration,
                     backend payment processing, and secure transactions with
                     Stripe. Oi Jo successfully provided a structured and
                     automated solution for the client's car rental business,
                     simplifying operations for all stakeholders involved.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, Stripe, Material Ul
+                    <br />
+                    Role: Frontend developer
                   </div>
                 </div>
               </div>
@@ -279,12 +251,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Open Curtains is a dynamic online platform designed to
                     connect professionals in the entertainment industry,
                     including actors, directors, and crew members. It serves as
@@ -301,13 +268,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     As part of the development team, my primary contribution was
                     focused on building and refining the features for actors and
                     crew members. To ensure a seamless and engaging user
@@ -316,19 +277,22 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Through my involvement in Open Curtains, I gained valuable
                     experience in frontend development, UI/UX optimization, and
                     API integration. My contributions helped enhance the overall
                     functionality and user experience of the platform, making it
                     a valuable tool for professionals in the entertainment
                     industry.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, Material UI
+                    <br />
+                    Role: Frontend developer
                   </div>
                 </div>
               </div>
@@ -356,12 +320,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     PMS is a Project Management System developed as part of my
                     second-year software project for Hasthiya IT, a software
                     company that provided the project requirements. The system
@@ -377,13 +336,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     As the team leader, I was responsible for overseeing the
                     project, ensuring smooth communication between team members,
                     supervisors, and Hasthiya IT representatives. I managed the
@@ -398,13 +351,7 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     My primary contributions to this project included the
                     development of the Kanban board and the project settings
                     module. The Kanban board, a crucial feature for visualizing
@@ -419,13 +366,7 @@ const Portfolio = () => {
                   </div>
                 </div>{" "}
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     This project provided me with hands-on experience in
                     full-stack development, state management with Redux,
                     drag-and-drop implementations, cloud storage integration
@@ -433,6 +374,16 @@ const Portfolio = () => {
                     developed strong technical and project management skills,
                     successfully leading the team to deliver a fully functional
                     project management system tailored to the client's needs.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, React DnD, Node.js, mongoDB, Redux, AWS
+                    S3 buckets
+                    <br />
+                    Role: full-stack developer
                   </div>
                 </div>
               </div>
@@ -460,12 +411,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     JCGN is a church community services application designed to
                     facilitate seamless engagement between church members and
                     their community. The platform provides various features,
@@ -478,13 +424,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     In this project, I contributed as both a frontend and
                     backend developer, focusing on two key functionalities:
                     live-streaming integration and secure payment gateway
@@ -497,13 +437,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Additionally, I developed the payment gateway to handle
                     subscriptions, product purchases, and donations securely.
                     For this, I integrated Stripe, ensuring safe and reliable
@@ -515,19 +449,22 @@ const Portfolio = () => {
                   </div>
                 </div>
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Through my contributions to JCGN, I gained valuable
                     experience in live-streaming integration, secure payment
                     processing, full-stack development, and API implementation.
                     My work helped create a reliable and user-friendly platform
                     that enables churches to connect with their communities more
                     effectively.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, Agora, Stripe, Node, MySQL, Sequelize
+                    <br />
+                    Role: full-stack developer
                   </div>
                 </div>
               </div>
@@ -555,12 +492,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Delta Max is a fitness challenge and reward platform
                     developed for a supplement supply client. The platform
                     encourages users to set and achieve their fitness goals by
@@ -573,13 +505,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     In this project, my primary contribution was developing the
                     challenge feature, which is the core functionality of the
                     platform. I worked on implementing the logic that allows
@@ -592,13 +518,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Additionally, I integrated Firebase push notifications to
                     enhance user engagement. This feature keeps users informed
                     about challenge updates, new invitations, and reward
@@ -610,18 +530,22 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Through my work on Delta Max, I gained hands-on experience
                     in backend development, database management, real-time
                     notifications, and API development. My contributions played
                     a crucial role in making the platform interactive, engaging,
                     and rewarding for fitness enthusiasts.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: Node.Js, MySQL, Sequeliz, Firebase push
+                    notification, WooCommerce API
+                    <br />
+                    Role: Backend Developer
                   </div>
                 </div>
               </div>
@@ -649,12 +573,7 @@ const Portfolio = () => {
               </div>
               <div className="project_description">
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     The JCGN Admin Panel is the administrative interface for
                     managing the JCGN church community services platform. This
                     panel provides church administrators with full control over
@@ -669,13 +588,7 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     In this project, I contributed to developing and refining
                     key admin functionalities, ensuring a seamless and
                     user-friendly experience for administrators. Using React.js
@@ -688,19 +601,22 @@ const Portfolio = () => {
                 </div>
 
                 <div className=" flex_Center">
-                  <div
-                    style={{
-                      width: "70%",
-                      textAlign: "justify",
-                      // margin: "20px",
-                      marginTop: "10px",
-                    }}>
+                  <div className="pharagraphContainer">
                     Through my work on the JCGN Admin Panel, I gained hands-on
                     experience in frontend development, UI/UX design, and admin
                     panel optimization. My contributions ensured that church
                     administrators could effortlessly manage website operations,
                     enhancing the overall functionality and efficiency of the
                     JCGN platform.
+                  </div>
+                </div>
+                <div className=" flex_Center">
+                  <div
+                    className="pharagraphContainer"
+                    style={{ fontWeight: "600  " }}>
+                    technologies: React, Material Ul, vite
+                    <br />
+                    Role: Frontend developer
                   </div>
                 </div>
               </div>
