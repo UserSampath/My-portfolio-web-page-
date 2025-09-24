@@ -4,6 +4,7 @@ import { CircularProgressbar } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import { db } from "../config/firebase";
 import { MoonLoader } from "react-spinners";
+// import Profile from "";
 
 
 const Skills = ({ color }) => {
@@ -43,15 +44,19 @@ const Skills = ({ color }) => {
         </div>
       )}
 
-      {skills.map(({ title, percentage }, index) => {
+      {skills.map(({ title, percentage,ID }, index) => {
         return (
           <div className="progress__box" key={index}>
             <div className="progress__circle">
-              <CircularProgressbar
+              {/* <CircularProgressbar
                 strokeWidth={7.5}
                 text={`${percentage}%`}
-                value={percentage}
-              />
+                value={100}
+              /> */}
+
+
+
+              <img style={{height:"50px",width:"50px"}} src={`../../src/assets/icons/${ID}.png`} alt=""/>
             </div>
             <h3 className="skills__title">{title}</h3>
           </div>

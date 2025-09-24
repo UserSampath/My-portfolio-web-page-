@@ -113,8 +113,8 @@ export const personalInfo = [
 
   {
     id: 6,
-    title: "Address : ",
-    description: "Rathnapura",
+    title: "Location : ",
+    description: "Katubedda, Sri Lanka",
   },
 
   {

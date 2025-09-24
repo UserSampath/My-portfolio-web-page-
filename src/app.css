@@ -40,11 +40,22 @@
 }
 
 .pharagraphContainer{
-  width: 70%;
+  width: 60%;
   text-align: justify;
   margin-top: 10px;
   line-height: 140%;
   font-family: "Livvic", sans-serif;
+
+}
+
+.portfolio_desc div {
+   width: 60%;
+  text-align: justify;
+  margin-top: 10px;
+  line-height: 140%;
+  font-family: "Livvic", sans-serif;
+  margin: auto;
+  padding-top: 10px;
 
 }
 
