@@ -31,7 +31,6 @@ import OiJo_withLogo from "./oijo_withLogo.png";
 import occWithLogo from "./occ_withLogo.png";
 import occ from "./occ.png";
 
-
 import pmsWithLogo from "./pms_withLogo.png";
 import pms from "./pms.png";
 
@@ -44,7 +43,31 @@ import deltaMax from "./deltaMax.png";
 import jcgnAdminWithLogo from "./jcgnAdminWithLogo.png";
 import jcgnAdmin from "./jcgnAdmin.png";
 
+import CareerReadinessSystemLogo from "./CareerReadinessSystemLogo.png";
+import CareerReadinessSystem from "./CareerReadinessSystem.png";
+
+import EasyRoomLogo from "./EasyRoomLogo.png";
+import EasyRoom from "./EasyRoom.png";
+
+import LuminaButtonLogo from "./LuminaButtonLogo.png";
+import LuminaButton from "./LuminaButton.png";
+
+import PocketGuardLogo from "./PocketGuardLogo.png";
+import PocketGuard from "./PocketGuard.png";
+
+import PortfolioLogo from "./PortfolioLogo.png";
+import Portfolio from "./Portfolio.png";
 export const photos = {
+  PortfolioLogo,
+  Portfolio,
+  PocketGuardLogo,
+  PocketGuard,
+  LuminaButtonLogo,
+  LuminaButton,
+  EasyRoomLogo,
+  EasyRoom,
+  CareerReadinessSystemLogo,
+  CareerReadinessSystem,
   ChatVista,
   ChatVistaWithLogo,
   OiJo,
@@ -60,7 +83,6 @@ export const photos = {
   jcgnAdminWithLogo,
   jcgnAdmin,
 };
-
 
 export const links = [
   {

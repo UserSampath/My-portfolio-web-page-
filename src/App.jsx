@@ -11,11 +11,13 @@ import Contact from "./pages/contact/Contact";
 import Themes from "./components/Themes";
 import Admin from "./pages/Admin/Admin";
 import ProjectDetails from "./pages/projectDetails/ProjectDetails";
+import ScrollToHashElement from "./components/ScrollToHashElement";
 function App() {
   return (
     <BrowserRouter>
       <Navbar />
       <Themes />
+      <ScrollToHashElement />
       <Routes>
         <Route index element={<Home />}></Route>
         <Route path="about" element={<About />}></Route>

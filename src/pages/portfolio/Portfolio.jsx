@@ -1,32 +1,32 @@
 import React, { useState } from "react";
 import "./portfolio.css";
 import { photos } from "../../assets/data";
-import { useNavigate, useRoutes } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import LuminaButton from "lumina-button";
+import { IoDocumentLockSharp } from "react-icons/io5";
+import { BsArrow90DegLeft } from "react-icons/bs";
 
 const Portfolio = () => {
   const router = useNavigate();
   const [industryProjects, setIndustryProjects] = useState([
-    { id: 5, name: "JCGN", photo: photos.jcgnWithLogo },
-    { id: 6, name: "Delta Max", photo: photos.deltaMaxLogo },
-    { id: 2, name: "Oi-Jo", photo: photos.OiJo_withLogo },
-    { id: 3, name: "Open Curtains", photo: photos.occWithLogo },
-    { id: 4, name: "PMS", photo: photos.pmsWithLogo },
-    { id: 7, name: "JCGN Admin Panel", photo: photos.jcgnAdminWithLogo },
-    
-
+    { name: "JCGN", photo: photos.jcgnWithLogo },
+    { name: "Delta Max", photo: photos.deltaMaxLogo },
+    { name: "Oi-Jo", photo: photos.OiJo_withLogo },
+    { name: "Open Curtains", photo: photos.occWithLogo },
+    { name: "PMS", photo: photos.pmsWithLogo },
+    { name: "JCGN Admin Panel", photo: photos.jcgnAdminWithLogo },
   ]);
 
   const [personalProjects, setPersonalProjects] = useState([
-    { id: 1, name: "ChatVista", photo: photos.ChatVistaWithLogo },
-    { id: 7, name: "Career Readiness System", photo: photos.pmsWithLogo },
-    { id: 2, name: "Portfolio", photo: photos.jcgnAdminWithLogo },
-    { id: 3, name: "SmartRoom ", photo: photos.occWithLogo },
-    { id: 4, name: "LuminaButton ", photo: photos.OiJo_withLogo },
-    { id: 5, name: "PocketGuard ", photo: photos.jcgnWithLogo },
-
-
-
-
+    { name: "ChatVista", photo: photos.ChatVistaWithLogo },
+    {
+      name: "Career Readiness System",
+      photo: photos.CareerReadinessSystemLogo,
+    },
+    { name: "Portfolio", photo: photos.PortfolioLogo },
+    { name: "EasyRoom ", photo: photos.EasyRoomLogo },
+    { name: "LuminaButton ", photo: photos.LuminaButtonLogo },
+    { name: "PocketGuard ", photo: photos.PocketGuardLogo },
   ]);
 
   return (
@@ -36,6 +36,7 @@ const Portfolio = () => {
       </h2>
       <div style={{ margin: "" }} className="separator"></div>
       <h3
+        id="industry-projects"
         style={{ marginBottom: "30px", fontSize: "20px" }}
         className="section__subtitle subtitle_center"
       >
@@ -67,6 +68,7 @@ const Portfolio = () => {
 
       <div style={{ marginTop: "55px" }} className="separator"></div>
       <h3
+        id="personal-projects"
         style={{ marginBottom: "30px", fontSize: "20px" }}
         className="section__subtitle subtitle_center"
       >
