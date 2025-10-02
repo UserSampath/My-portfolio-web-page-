@@ -27,6 +27,8 @@ const Portfolio = () => {
     { name: "EasyRoom ", photo: photos.EasyRoomLogo },
     { name: "LuminaButton ", photo: photos.LuminaButtonLogo },
     { name: "PocketGuard ", photo: photos.PocketGuardLogo },
+    { name: "Algebrify ", photo: photos.AlgebrifyLogo },
+
   ]);
 
   return (

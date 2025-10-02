@@ -132,55 +132,67 @@ const ProjectDetails = () => {
       photo: photos.jcgnAdmin,
     },
     {
-  name: "Portfolio",
-  desc: `<div>This portfolio website was designed and developed to showcase my skills, education, and the projects I have built. The platform highlights my technical expertise while providing visitors with a clear overview of my professional background and practical experience.</div>
+      name: "Portfolio",
+      desc: `<div>This portfolio website was designed and developed to showcase my skills, education, and the projects I have built. The platform highlights my technical expertise while providing visitors with a clear overview of my professional background and practical experience.</div>
   <div>The website features a clean and modern user interface, making it easy to navigate through different sections such as skills, education, and projects. Special emphasis is placed on my project work, where I present detailed descriptions of real-world applications I have developed, along with the technologies used and my specific contributions.</div>
   <div>In this project, I implemented serverless functions with Firebase Cloud Functions and deployed the site using Firebase Hosting, ensuring fast and reliable performance. The use of React enabled me to create a dynamic, responsive, and component-based structure, resulting in a smooth user experience across devices.</div>
   <div>Through building this portfolio, I gained practical experience in frontend development, serverless architecture, and deployment workflows, while also creating a platform that effectively communicates my skills and professional journey.</div>`,
-  technologies: "React, Firebase Cloud Functions, Firebase Hosting",
-  role: "Full Stack Developer",
-  photo: photos.Portfolio,
-},
-{
-  name: "EasyRoom",
-  desc: `<div>EasyRoom is a room automation system developed as an experimental project to combine software and hardware for smart environment control. The platform allows users to manage devices either manually or automatically, depending on the type of switch configured.</div>
+      technologies: "React, Firebase Cloud Functions, Firebase Hosting",
+      role: "Full Stack Developer",
+      photo: photos.Portfolio,
+    },
+    {
+      name: "EasyRoom",
+      desc: `<div>EasyRoom is a room automation system developed as an experimental project to combine software and hardware for smart environment control. The platform allows users to manage devices either manually or automatically, depending on the type of switch configured.</div>
   <div>The system supports different types of smart switches. For example, temperature- and humidity-sensitive devices such as fans or air conditioners are controlled using data from DHT11 temperature and humidity sensors. Similarly, light-sensitive devices such as lamps are managed through an LDR sensor, enabling automated responses to ambient light conditions. Users also have the option to manually switch devices on or off, offering flexibility in operation.</div>
   <div>The backend was built with Firebase Realtime Database and Cloud Functions to handle device states and real-time updates. On the hardware side, ESP12E microcontrollers programmed via Arduino IDE served as the bridge between sensors and cloud services. The frontend, developed using Next.js, provided an intuitive interface for monitoring and controlling connected devices.</div>
   <div>Through developing EasyRoom, I gained hands-on experience in IoT development, real-time databases, cloud integration, and hardware-software communication. This project allowed me to explore how modern technologies can be combined to create a responsive, automated, and user-friendly smart room system.</div>
   <iframe width="560" height="315" src="https://www.youtube.com/embed/5dZx3scqEQU?si=SibzA9XO6fPyZCF9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
   `,
-  technologies: "Next.js, Firebase Realtime Database, Firebase Cloud Functions, ESP12E, Arduino IDE, DHT11, LDR",
-  role: "Full Stack & IoT Developer",
-  photo: photos.EasyRoom,
-},
-{
-  name: "LuminaButton",
-  desc: `<div>LuminaButton is a custom NPM package I developed as both a personal project and a reusable UI component library for my own applications. The goal of the project was to experiment with creating, publishing, and consuming an NPM package while designing a versatile and stylish button system.</div>
+      technologies:
+        "Next.js, Firebase Realtime Database, Firebase Cloud Functions, ESP12E, Arduino IDE, DHT11, LDR",
+      role: "Full Stack & IoT Developer",
+      photo: photos.EasyRoom,
+    },
+    {
+      name: "LuminaButton",
+      desc: `<div>LuminaButton is a custom NPM package I developed as both a personal project and a reusable UI component library for my own applications. The goal of the project was to experiment with creating, publishing, and consuming an NPM package while designing a versatile and stylish button system.</div>
   <div>The package provides a wide range of customization options, making it easy to integrate buttons into different projects. It includes multiple built-in variants such as primary, secondary, success, warning, danger, info, light, dark, link, and ghost. To enhance visual appeal, it supports over 15 gradient background combinations, subtle glow effects, and various hover transitions like fill, scale, shadow, glow, wave, and fade. Animations such as pulse, wave, and bounce are also included for interactive user experiences.</div>
   <div>LuminaButton also focuses on flexibility and responsiveness. Developers can choose from multiple sizes (small, medium, large), outline modes, and six levels of corner rounding (from sharp edges to full circle). Additional features include built-in loading states, left/right icon support, and a full-width option for responsive layouts. To maximize customization, the package allows overriding default colors and background styles with custom values.</div>
   <div>Through building LuminaButton, I gained experience in creating reusable UI components, configuring Webpack for package bundling, and working with TypeScript in a production-style setup. It was both a fun and practical project that enhanced my understanding of NPM package development and UI/UX design patterns.</div>`,
-  technologies: "Next.js, TypeScript, Webpack",
-  role: "Frontend Developer",
-  photo: photos.LuminaButton,
-},
-{
-  name: "PocketGuard",
-  desc: `<div>PocketGuard is a personal finance management system developed primarily using Next.js and Nest.js. The project was designed to help users efficiently track, organize, and analyze their incomes and expenses, providing a clear overview of their financial situation.</div>
+      technologies: "Next.js, TypeScript, Webpack",
+      role: "Frontend Developer",
+      photo: photos.LuminaButton,
+    },
+    {
+      name: "PocketGuard",
+      desc: `<div>PocketGuard is a personal finance management system developed primarily using Next.js and Nest.js. The project was designed to help users efficiently track, organize, and analyze their incomes and expenses, providing a clear overview of their financial situation.</div>
   <div>The platform offers intuitive dashboards and visualizations to give users meaningful insights into their spending habits. Users can categorize income and expense sources, view summaries, and monitor trends over time. Additionally, the system includes an export feature, allowing users to download their financial data as Excel files for further analysis or record-keeping.</div>
   <div>By developing PocketGuard, I gained hands-on experience in full-stack development, integrating Next.js for the frontend, Nest.js for the backend, and MongoDB for database management. This project also strengthened my skills in data visualization, user interface design, and building functional, real-world financial tools.</div>`,
-  technologies: "Nest.js, Next.js, MongoDB",
-  role: "Full Stack Developer",
-  photo: photos.PocketGuard,
-},
-{
-  name: "Career Readiness System",
-  desc: `<div>The Career Readiness System was developed as my fourth-year research project, where I served as the project leader of a three-member team. The overall project is titled "AI-Enhanced System for Assessing Industry Readiness of Software Engineers with Continuous Learning" and focuses on evaluating and improving the industry readiness of software engineers.</div>
+      technologies: "Nest.js, Next.js, MongoDB",
+      role: "Full Stack Developer",
+      photo: photos.PocketGuard,
+    },
+    {
+      name: "Algebrify",
+      desc: `<div>Algebrify is a custom-built e-learning platform designed to help students master Algebra through an engaging, accessible, and interactive digital environment. The system aligns with national curriculum standards while integrating modern learning technologies and educational theories.</div>
+  <div>The platform is tailored for students aged 14–16 preparing for O/L Mathematics, with a strong focus on Algebra. It addresses common challenges in abstract mathematical concepts through constructivist, interactive, and multimedia-rich learning experiences. Key features include mobile responsiveness, multilingual support (Sinhala, Tamil, English), gamification with leaderboards and rewards, and seamless delivery of lessons, quizzes, and collaboration tools.</div>
+  <div>Algebrify offers a structured 8-week program with 16 lessons covering both fundamental algebraic operations and advanced problem-solving techniques. The system integrates video lectures, GeoGebra-powered graph tools, quizzes, simulations, and weekly puzzles to strengthen student understanding. In addition, it provides instant feedback through auto-graded assessments, progress dashboards, and real-time collaboration via group chats and discussion forums.</div>
+  <div>Through the development of Algebrify, I gained practical experience in building educational platforms, incorporating gamification, interactive content delivery, and collaborative features to enhance the overall digital learning experience for students.</div>`,
+      technologies: "NextJs, Spring boot, MySQL",
+      role: "Full Stack Developer",
+      photo: photos.Algebrify,
+    },
+
+    {
+      name: "Career Readiness System",
+      desc: `<div>The Career Readiness System was developed as my fourth-year research project, where I served as the project leader of a three-member team. The overall project is titled "AI-Enhanced System for Assessing Industry Readiness of Software Engineers with Continuous Learning" and focuses on evaluating and improving the industry readiness of software engineers.</div>
   <div>The system is composed of three main modules. My primary contribution was developing the Personalized Question Recommendation module. For this, I implemented a hybrid approach that combines collaborative filtering, graph-based filtering, and reinforcement learning to generate adaptive and personalized question recommendations tailored to each user's skills, experience, and learning needs.</div>
   <div>This project provided hands-on experience in AI-driven recommendation systems, user profiling, and integrating multiple data-driven techniques to create a practical and adaptive learning platform. The system leverages Python and Scikit-learn for machine learning, Neo4j for graph-based modeling, DeepFace for facial analysis, FastAPI for backend services, and Next.js for a responsive frontend interface.</div>`,
-  technologies: "Python, Scikit-learn, Neo4j, DeepFace, FastAPI, Next.js",
-  role: "Project Leader & Recommendation System Developer",
-  photo: photos.CareerReadinessSystem,
-}
+      technologies: "Python, Scikit-learn, Neo4j, DeepFace, FastAPI, Next.js",
+      role: "Project Leader & Recommendation System Developer",
+      photo: photos.CareerReadinessSystem,
+    },
   ]);
 
   return (
@@ -193,7 +205,7 @@ const ProjectDetails = () => {
                 <span>{item.name}</span>
               </h2>
               <div className="flex_Center">
-                <div  className=" project_details_img ">
+                <div className=" project_details_img ">
                   <img src={item.photo} alt="" />
                 </div>
               </div>

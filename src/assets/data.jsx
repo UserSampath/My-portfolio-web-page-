@@ -57,6 +57,9 @@ import PocketGuard from "./PocketGuard.png";
 
 import PortfolioLogo from "./PortfolioLogo.png";
 import Portfolio from "./Portfolio.png";
+
+import AlgebrifyLogo from "./AlgebrifyLogo.png";
+import Algebrify from "./Algebrify.png";
 export const photos = {
   PortfolioLogo,
   Portfolio,
@@ -82,6 +85,8 @@ export const photos = {
   deltaMax,
   jcgnAdminWithLogo,
   jcgnAdmin,
+  AlgebrifyLogo,
+  Algebrify
 };
 
 export const links = [
